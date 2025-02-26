@@ -2,7 +2,7 @@
   "name": "TREX-MD",
   "description": "I am TREX-MD WhatsApp MultiDevice Bot built in NodeJs to enhance the experience.",
   "logo": "https://i.ibb.co/4jBhn13/Socialthumb.jpg",
-  "keywords": ["JAWAD-MD"],
+  "keywords": ["TREX-MD"],
   "repository": "https://github.com/Berabruce/forever",
   "stack": "container",
   "env": { 
