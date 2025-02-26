@@ -116,7 +116,7 @@ Matrix.ev.on('connection.update', (update) => {
         if (initialConnection) {
             console.log(chalk.green("Connected Successfully TREX-MD 🤍"));
             Matrix.sendMessage(Matrix.user.id, { 
-                image: { url: "https://files.catbox.moe/pf270b.jpg" }, 
+                image: { url: "https://i.ibb.co/4jBhn13/Socialthumb.jpg" }, 
                 caption: `*Hello there TREX-MD User! 👋🏻* 
 
 > Simple, Straightforward, But Loaded With Features 🎊. Meet TREX-MD WhatsApp Bot.
