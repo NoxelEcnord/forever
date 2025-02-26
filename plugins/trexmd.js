@@ -150,6 +150,7 @@ const test = async (m, Matrix) => {
 ┃◈ ${prefix}𝙳𝙱𝙸𝙽𝙰𝚁𝚈
 ┃◈ ${prefix}𝙴𝙼𝙾𝙹𝙸𝙼𝙸𝚇
 ┃◈ ${prefix}𝙼𝙿3
+┃◈ ${prefix}url
 ╰━━━━━━━━━━━━━━━⪼
 ╭━❮ 𝙰𝙸 ❯━╮
 ┃◈ ${prefix}𝙰𝚒
@@ -250,7 +251,7 @@ const test = async (m, Matrix) => {
         forwardingScore: 999,
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
-          newsletterJid: '120363398040175935@newsletter',
+          newsletterJid: '12036326624904@newsletter',
           newsletterName: "TREX-MD",
           serverMessageId: 143
         }
@@ -262,7 +263,7 @@ const test = async (m, Matrix) => {
     // Send audio after sending the menu
     await Matrix.sendMessage(m.from, {
       audio: { url: 'https://files.catbox.moe/jlgpoy.mp3' },
-      mimetype: 'audio/mp3',
+      mimetype: 'audio/mp4',
       ptt: true
     }, { quoted: m });
   }
