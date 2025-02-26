@@ -251,7 +251,7 @@ const test = async (m, Matrix) => {
         forwardingScore: 999,
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
-          newsletterJid: '12036326624904@newsletter',
+          newsletterJid: 'https://whatsapp.com/channel/0029VajJoCoLI8YePbpsnE3q',
           newsletterName: "TREX-MD",
           serverMessageId: 143
         }
