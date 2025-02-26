@@ -9,7 +9,7 @@
     "stop": "pm2 stop TREX-MD",
     "restart": "pm2 restart TREX-MD"
   },
-  "keywords": ["jawad-md", "whatsapp-bot", "whatsapp md bot"],
+  "keywords": ["trex-md", "whatsapp-bot", "whatsapp md bot"],
   "author": "BRUCE BERA",
   "license": "ISC",
   "dependencies": {
