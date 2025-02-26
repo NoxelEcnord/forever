@@ -8,7 +8,7 @@ import {
     DisconnectReason,
     useMultiFileAuthState,
 } from '@whiskeysockets/baileys';
-import { Handler, Callupdate, GroupUpdate } from './src/event/index.js';
+import { Handler, Callupdate, GroupUpdate } from './data/index.js';
 import express from 'express';
 import pino from 'pino';
 import fs from 'fs';
@@ -56,7 +56,7 @@ async function downloadSessionData() {
         return false;
     }
 
-   const sessdata = config.SESSION_ID.split("KHAN-MD~")[1];
+    const sessdata = config.SESSION_ID.split("KHAN-MD~")[1];
 
     if (!sessdata || !sessdata.includes("#")) {
         console.error('❌ Invalid SESSION_ID format! It must contain both file ID and decryption key.');
@@ -129,9 +129,9 @@ https://whatsapp.com/channel/0029VajJoCoLI8YePbpsnE3q
 - *YOUR PREFIX:* = ${prefix}
 
 Don't forget to give a star to the repo ⬇️  
-https://github.com/Berabruce/TREX-MD 
+https://github.com/Berabruce/TREX-MD
 
-> © Powered BY Bruce Bera 🖤`
+> © Powered BY BERA TECH `
             });
             initialConnection = false;
         } else {
@@ -179,7 +179,7 @@ https://github.com/Berabruce/TREX-MD
             await Matrix.readMessages([mek.key]);
             
             if (config.AUTO_STATUS_REPLY) {
-                const customMessage = config.STATUS_READ_MSG || '✅ Auto Status Seen Bot By TREX-MD';
+                const customMessage = config.STATUS_READ_MSG || '✅ Auto Status Seen Bot By JAWAD-MD';
                 await Matrix.sendMessage(fromJid, { text: customMessage }, { quoted: mek });
             }
         }
@@ -214,7 +214,7 @@ async function init() {
 init();
 
 app.get('/', (req, res) => {
-    res.send('Hello your bot is running smoothly.Dont forget to give a star on my repository');
+    res.send('Hello World!');
 });
 
 app.listen(PORT, () => {
