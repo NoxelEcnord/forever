@@ -8,7 +8,7 @@ import {
     DisconnectReason,
     useMultiFileAuthState,
 } from '@whiskeysockets/baileys';
-import { Handler, Callupdate, GroupUpdate } from './bera/bera.js';
+import { Handler, Callupdate, GroupUpdate } from './bera/event/index.js';
 import express from 'express';
 import pino from 'pino';
 import fs from 'fs';
@@ -70,20 +70,20 @@ async function start() {
     try {
         const { state, saveCreds } = await useMultiFileAuthState(sessionDir);
         const { version, isLatest } = await fetchLatestBaileysVersion();
-        console.log(`🤖 TREX-MD using WA v${version.join('.')}, isLatest: ${isLatest}`);
+        console.log(`joel md using WA v${version.join('.')}, isLatest: ${isLatest}`);
         
         const Matrix = makeWASocket({
             version,
             logger: pino({ level: 'silent' }),
             printQRInTerminal: useQR,
-            browser: ["TREX-MD", "safari", "3.3"],
+            browser: ["ʝσєℓ χ∂", "safari", "3.3"],
             auth: state,
             getMessage: async (key) => {
                 if (store) {
                     const msg = await store.loadMessage(key.remoteJid, key.id);
                     return msg.message || undefined;
                 }
-                return { conversation: "TREX-MD whatsapp user bot" };
+                return { conversation: "joel md  whatsapp user bot" };
             }
         });
 
@@ -95,26 +95,9 @@ async function start() {
                 }
             } else if (connection === 'open') {
                 if (initialConnection) {
-                               console.log(chalk.green("Connected Successfully TREX-MD 🤍"));
-            Matrix.sendMessage(Matrix.user.id, { 
-                image: { url: "https://i.ibb.co/4jBhn13/Socialthumb.jpg" }, 
-                caption: `*Hello there TREX-MD User! 👋🏻* 
-
-> Simple, Straightforward, But Loaded With Features 🎊. Meet TREX-MD WhatsApp Bot.
-
-*Thanks for using TREX-MD 🚩* 
-
-> Join WhatsApp Channel: ⤵️  
-https://whatsapp.com/channel/0029VajJoCoLI8YePbpsnE3q
-
-- *YOUR PREFIX:* = ${prefix}
-
-Don't forget to give a star to the repo ⬇️  
-https://github.com/Berabruce/TREX-MD
-
-> © Powered BY BERA TECH `
-            });
-             initialConnection = false;
+                    console.log(chalk.green("Bera bot"));
+                    Matrix.sendMessage(Matrix.user.id, { text: `bera bot` });
+                    initialConnection = false;
                 } else {
                     console.log(chalk.blue("♻️ Connection reestablished after restart."));
                 }
@@ -173,9 +156,12 @@ async function init() {
 init();
 
 app.get('/', (req, res) => {
-    res.send('Hello World!');
+    res.send('am joel bot');
 });
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
+
+
+//updated by  💗
