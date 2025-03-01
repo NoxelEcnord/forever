@@ -1,3 +1,5 @@
+
+
 import moment from 'moment-timezone';
 import fs from 'fs';
 import os from 'os';
@@ -5,205 +7,345 @@ import pkg from '@whiskeysockets/baileys';
 const { generateWAMessageFromContent, proto } = pkg;
 import config from '../config.cjs';
 
-// Get total memory and free memory in bytes
-const totalMemoryBytes = os.totalmem();
-const freeMemoryBytes = os.freemem();
-
-// Define unit conversions
-const byteToKB = 1 / 1024;
-const byteToMB = byteToKB / 1024;
-const byteToGB = byteToMB / 1024;
-
-// Function to format bytes to a human-readable format
-function formatBytes(bytes) {
-  if (bytes >= Math.pow(1024, 3)) {
-    return (bytes * byteToGB).toFixed(2) + ' GB';
-  } else if (bytes >= Math.pow(1024, 2)) {
-    return (bytes * byteToMB).toFixed(2) + ' MB';
-  } else if (bytes >= 1024) {
-    return (bytes * byteToKB).toFixed(2) + ' KB';
-  } else {
-    return bytes.toFixed(2) + ' bytes';
-  }
-}
-
-// Bot Process Time
-const uptime = process.uptime();
-const day = Math.floor(uptime / (24 * 3600)); // Calculate days
-const hours = Math.floor((uptime % (24 * 3600)) / 3600); // Calculate hours
-const minutes = Math.floor((uptime % 3600) / 60); // Calculate minutes
-const seconds = Math.floor(uptime % 60); // Calculate seconds
-
-// Uptime
-const uptimeMessage = `*I am alive now since ${day}d ${hours}h ${minutes}m ${seconds}s*`;
-const runMessage = `*☀️ ${day} Day*\n*🕐 ${hours} Hour*\n*⏰ ${minutes} Minutes*\n*⏱️ ${seconds} Seconds*\n`;
-
-const xtime = moment.tz("Asia/Colombo").format("HH:mm:ss");
-const xdate = moment.tz("Asia/Colombo").format("DD/MM/YYYY");
-const time2 = moment().tz("Asia/Colombo").format("HH:mm:ss");
-let pushwish = "";
-
-if (time2 < "05:00:00") {
-  pushwish = `Good Morning 🌄`;
-} else if (time2 < "11:00:00") {
-  pushwish = `Good Morning 🌄`;
-} else if (time2 < "15:00:00") {
-  pushwish = `Good Afternoon 🌅`;
-} else if (time2 < "18:00:00") {
-  pushwish = `Good Evening 🌃`;
-} else if (time2 < "19:00:00") {
-  pushwish = `Good Evening 🌃`;
-} else {
-  pushwish = `Good Night 🌌`;
-}
-
-const test = async (m, Matrix) => {
-  const prefix = config.PREFIX;
-  const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0].toLowerCase() : '';
-  const mode = config.MODE === 'public' ? 'public' : 'private';
-  const pref = config.PREFIX;
-
-  const validCommands = ['list', 'help', 'menu'];
-
-  if (validCommands.includes(cmd)) {
-    const str = `╭━━━〔 *TREX-MD* 〕━━━┈⊷
+cmd({
+    pattern: "menu",
+    alias: ["allmenu","fullmenu"],use: '.menu2',
+    desc: "menu the bot",
+    category: "menu",
+    react: "⚡",
+    filename: __filename
+}, 
+async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
+    try {
+        let dec = `╭━━━〔 *${config.BOT_NAME}* 〕━━━┈⊷
 ┃★╭──────────────
-┃★│ Owner : *BRUCE BERA*
-┃★│ User : *${m.pushName}*
+┃★│ Owner : *${config.OWNER_NAME}*
 ┃★│ Baileys : *Multi Device*
 ┃★│ Type : *NodeJs*
-┃★│ Mode : *${mode}*
-┃★│ Platform : *${os.platform()}*
-┃★│ Prefix : [${prefix}]
-┃★│ Version : *1.1.0*
+┃★│ Platform : *Heroku*
+┃★│ Mode : *[${config.MODE}]*
+┃★│ Prifix : *[${config.PREFIX}]*
+┃★│ Version : *3.0.0 Bᴇᴛᴀ*
 ┃★╰──────────────
-╰━━━━━━━━━━━━━━━┈⊷ 
-> Hey ${m.pushName} ${pushwish}
-╭━❮ 𝙲𝙾𝙽𝚅𝙴𝚁𝚃𝙴𝚁 ❯━╮
-┃◈ ${prefix}𝙰𝚃𝚃𝙿
-┃◈ ${prefix}𝙰𝚃𝚃𝙿2
-┃◈ ${prefix}𝙰𝚃𝚃𝙿3
-┃◈ ${prefix}𝙴𝙱𝙸𝙽𝙰𝚁𝚈
-┃◈ ${prefix}𝙳𝙱𝙸𝙽𝙰𝚁𝚈
-┃◈ ${prefix}𝙴𝙼𝙾𝙹𝙸𝙼𝙸𝚇
-┃◈ ${prefix}𝙼𝙿3
-┃◈ ${prefix}url
-╰━━━━━━━━━━━━━━━⪼
-╭━❮ 𝙰𝙸 ❯━╮
-┃◈ ${prefix}𝙰𝚒
-┃◈ ${prefix}𝙱𝚞𝚐
-┃◈ ${prefix}𝚁𝚎𝚙𝚘𝚛𝚝
-┃◈ ${prefix}𝙶𝚙𝚝
-┃◈ ${prefix}𝙳𝚊𝚕𝚕𝚎
-┃◈ ${prefix}𝚁𝚎𝚖𝚒𝚗𝚒
-┃◈ ${prefix}𝙶𝚎𝚖𝚒𝚗𝚒
-╰━━━━━━━━━━━━━━━⪼
-╭━❮ 𝚃𝙾𝙾𝙻 ❯━╮
-┃◈ ${prefix}𝙲𝚊𝚕𝚌𝚞𝚕𝚊𝚝𝚘𝚛
-┃◈ ${prefix}𝚃𝚎𝚖𝚙𝚖𝚊𝚒𝚕
-┃◈ ${prefix}𝙲𝚑𝚎𝚌𝚔𝚖𝚊𝚒𝚕
-┃◈ ${prefix}𝚃𝚛𝚝
-┃◈ ${prefix}𝚃𝚝𝚜
-╰━━━━━━━━━━━━━━━⪼
-╭━❮ 𝙶𝚁𝙾𝚄𝙿 ❯━╮
-┃◈ ${prefix}𝙻𝚒𝚗𝚔𝙶𝚛𝚘𝚞𝚙
-┃◈ ${prefix}𝚂𝚎𝚝𝚙𝚙𝚐𝚌
-┃◈ ${prefix}𝚂𝚎𝚝𝚗𝚊𝚖𝚎
-┃◈ ${prefix}𝚂𝚎𝚝𝚍𝚎𝚜𝚌
-┃◈ ${prefix}𝙶𝚛𝚘𝚞𝚙
-┃◈ ${prefix}𝙶𝚌𝚜𝚎𝚝𝚝𝚒𝚗𝚐
-┃◈ ${prefix}𝚆𝚎𝚕𝚌𝚘𝚖𝚎
-┃◈ ${prefix}𝙰𝚍𝚍
-┃◈ ${prefix}𝙺𝚒𝚌𝚔
-┃◈ ${prefix}𝙷𝚒𝚍𝚎𝚃𝚊𝚐
-┃◈ ${prefix}𝚃𝚊𝚐𝚊𝚕𝚕
-┃◈ ${prefix}𝙰𝚗𝚝𝚒𝙻𝚒𝚗𝚔
-┃◈ ${prefix}𝙰𝚗𝚝𝚒𝚃𝚘𝚡𝚒𝚌
-┃◈ ${prefix}𝙿𝚛𝚘𝚖𝚘𝚝𝚎
-┃◈ ${prefix}𝙳𝚎𝚖𝚘𝚝𝚎
-┃◈ ${prefix}𝙶𝚎𝚝𝚋𝚒𝚘
-╰━━━━━━━━━━━━━━━⪼
-╭━❮ 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 ❯━╮
-┃◈ ${prefix}𝙰𝚙𝚔
-┃◈ ${prefix}𝙵𝚊𝚌𝚎𝚋𝚘𝚘𝚔
-┃◈ ${prefix}𝙼𝚎𝚍𝚒𝚊𝚏𝚒𝚛𝚎
-┃◈ ${prefix}𝙿𝚒𝚗𝚝𝚎𝚛𝚎𝚜𝚝𝚍𝚕
-┃◈ ${prefix}𝙶𝚒𝚝𝚌𝚕𝚘𝚗𝚎
-┃◈ ${prefix}𝙶𝚍𝚛𝚒𝚟𝚎
-┃◈ ${prefix}𝙸𝚗𝚜𝚝𝚊
-┃◈ ${prefix}𝚈𝚝𝚖𝚙3
-┃◈ ${prefix}𝚈𝚝𝚖𝚙4
-┃◈ ${prefix}𝙿𝚕𝚊𝚢
-┃◈ ${prefix}𝚂𝚘𝚗𝚐
-┃◈ ${prefix}𝚅𝚒𝚍𝚎𝚘
-┃◈ ${prefix}𝚈𝚝𝚖𝚙3𝚍𝚘𝚌
-┃◈ ${prefix}𝚈𝚝𝚖𝚙4𝚍𝚘𝚌
-┃◈ ${prefix}𝚃𝚒𝚔𝚝𝚘𝚔
-╰━━━━━━━━━━━━━━━⪼
-╭━❮ 𝚂𝙴𝙰𝚁𝙲𝙷 ❯━╮
-┃◈ ${prefix}𝙿𝚕𝚊𝚢
-┃◈ ${prefix}𝚈𝚝𝚜
-┃◈ ${prefix}𝙸𝚖𝚍𝚋
-┃◈ ${prefix}𝙶𝚘𝚘𝚐𝚕𝚎
-┃◈ ${prefix}𝙶𝚒𝚖𝚊𝚐𝚎
-┃◈ ${prefix}𝙿𝚒𝚗𝚝𝚎𝚛𝚎𝚜𝚝
-┃◈ ${prefix}𝚆𝚊𝚕𝚕𝚙𝚊𝚙𝚎𝚛
-┃◈ ${prefix}𝚆𝚒𝚔𝚒𝚖𝚎𝚍𝚒𝚊
-┃◈ ${prefix}𝚈𝚝𝚜𝚎𝚊𝚛𝚌𝚑
-┃◈ ${prefix}𝚁𝚒𝚗𝚐𝚝𝚘𝚗𝚎
-┃◈ ${prefix}𝙻𝚢𝚛𝚒𝚌𝚜
-╰━━━━━━━━━━━━━━━⪼
-╭━❮ 𝙼𝙰𝙸𝙽 ❯━╮
-┃◈ ${prefix}𝙿𝚒𝚗𝚐
-┃◈ ${prefix}𝙰𝚕𝚒𝚟𝚎
-┃◈ ${prefix}𝙾𝚠𝚗𝚎𝚛
-┃◈ ${prefix}𝙼𝚎𝚗𝚞
-┃◈ ${prefix}𝙸𝚗𝚏𝚘𝚋𝚘𝚝
-╰━━━━━━━━━━━━━━━⪼
-╭━❮ 𝙾𝚆𝙽𝙴𝚁 ❯━╮
-┃◈ ${prefix}𝙹𝚘𝚒𝚗
-┃◈ ${prefix}𝙻𝚎𝚊𝚟𝚎
-┃◈ ${prefix}𝙱𝚕𝚘𝚌𝚔
-┃◈ ${prefix}𝚄𝚗𝚋𝚕𝚘𝚌𝚔
-┃◈ ${prefix}𝚂𝚎𝚝𝚙𝚙𝚋𝚘𝚝
-┃◈ ${prefix}𝙰𝚗𝚝𝚒𝚌𝚊𝚕𝚕
-┃◈ ${prefix}𝚂𝚎𝚝𝚜𝚝𝚊𝚝𝚞𝚜
-┃◈ ${prefix}𝚂𝚎𝚝𝚗𝚊𝚖𝚎𝚋𝚘𝚝
-┃◈ ${prefix}𝙰𝚞𝚝𝚘𝚃𝚢𝚙𝚒𝚗𝚐
-┃◈ ${prefix}𝙰𝚕𝚠𝚊𝚢𝚜𝙾𝚗𝚕𝚒𝚗𝚎
-┃◈ ${prefix}𝙰𝚞𝚝𝚘𝚁𝚎𝚊𝚍
-┃◈ ${prefix}𝚊𝚞𝚝𝚘𝚜𝚟𝚒𝚎𝚠
-╰━━━━━━━━━━━━━━━⪼
-╭━❮ 𝚂𝚃𝙰𝙻𝙺 ❯━╮
-┃◈ ${prefix}𝚃𝚛𝚞𝚎𝚌𝚊𝚕𝚕𝚎𝚛
-┃◈ ${prefix}𝙸𝚗𝚜𝚝𝚊𝚂𝚝𝚊𝚕𝚔
-┃◈ ${prefix}𝙶𝚒𝚝𝚑𝚞𝚋𝚂𝚝𝚊𝚕𝚔
-╰━━━━━━━━━━━━━━━⪼`;
+╰━━━━━━━━━━━━━━━┈⊷
+╭━━〔 *Download Menu* 〕━━┈⊷
+┃◈╭─────────────·๏
+┃◈┃• facebook
+┃◈┃• mediafire
+┃◈┃• tiktok
+┃◈┃• twitter
+┃◈┃• Insta
+┃◈┃• apk
+┃◈┃• img
+┃◈┃• tt2
+┃◈┃• pins
+┃◈┃• apk2
+┃◈┃• fb2
+┃◈┃• pinterest 
+┃◈┃• spotify
+┃◈┃• play
+┃◈┃• play2
+┃◈┃• play3
+┃◈┃• play4
+┃◈┃• play5
+┃◈┃• play6
+┃◈┃• play7
+┃◈┃• play8
+┃◈┃• play9
+┃◈┃• play10
+┃◈┃• audio
+┃◈┃• video
+┃◈┃• video2
+┃◈┃• video3
+┃◈┃• video4
+┃◈┃• video5
+┃◈┃• video6
+┃◈┃• video7
+┃◈┃• video8
+┃◈┃• video9
+┃◈┃• video10
+┃◈┃• ytmp3
+┃◈┃• ytmp4
+┃◈┃• song
+┃◈┃• darama
+┃◈┃• gdrive
+┃◈┃• ssweb
+┃◈┃• tiks
+┃◈└───────────┈⊷
+╰──────────────┈⊷
+╭━━〔 *Group Menu* 〕━━┈⊷
+┃◈╭─────────────·๏
+┃◈┃• grouplink
+┃◈┃• kickall
+┃◈┃• kickall2
+┃◈┃• kickall3
+┃◈┃• add
+┃◈┃• remove
+┃◈┃• kick
+┃◈┃• promote 
+┃◈┃• demote
+┃◈┃• dismiss 
+┃◈┃• revoke
+┃◈┃• setgoodbye
+┃◈┃• setwelcome
+┃◈┃• delete 
+┃◈┃• getpic
+┃◈┃• ginfo
+┃◈┃• delete 
+┃◈┃• disappear on
+┃◈┃• disappear off
+┃◈┃• disappear 7D,24H
+┃◈┃• allreq
+┃◈┃• updategname
+┃◈┃• updategdesc
+┃◈┃• joinrequests
+┃◈┃• senddm
+┃◈┃• nikal
+┃◈┃• mute
+┃◈┃• unmute
+┃◈┃• lockgc
+┃◈┃• unlockgc
+┃◈┃• invite
+┃◈┃• tag
+┃◈┃• hidetag
+┃◈┃• tagall
+┃◈┃• tagadmins
+┃◈└───────────┈⊷
+╰──────────────┈⊷
+╭━━〔 *Reactions Menu* 〕━━┈⊷
+┃◈╭─────────────·๏
+┃◈┃• bully @tag
+┃◈┃• cuddle @tag
+┃◈┃• cry @tag
+┃◈┃• hug @tag
+┃◈┃• awoo @tag
+┃◈┃• kiss @tag
+┃◈┃• lick @tag
+┃◈┃• pat @tag
+┃◈┃• smug @tag
+┃◈┃• bonk @tag
+┃◈┃• yeet @tag
+┃◈┃• blush @tag
+┃◈┃• smile @tag
+┃◈┃• wave @tag
+┃◈┃• highfive @tag
+┃◈┃• handhold @tag
+┃◈┃• nom @tag
+┃◈┃• bite @tag
+┃◈┃• glomp @tag
+┃◈┃• slap @tag
+┃◈┃• kill @tag
+┃◈┃• happy @tag
+┃◈┃• wink @tag
+┃◈┃• poke @tag
+┃◈┃• dance @tag
+┃◈┃• cringe @tag
+┃◈└───────────┈⊷
+╰──────────────┈⊷
+╭━━〔 *Owner Menu* 〕━━┈⊷
+┃◈╭─────────────·๏
+┃◈┃• owner
+┃◈┃• menu
+┃◈┃• menu2
+┃◈┃• vv
+┃◈┃• listcmd
+┃◈┃• allmenu
+┃◈┃• repo
+┃◈┃• block
+┃◈┃• unblock
+┃◈┃• fullpp
+┃◈┃• setpp
+┃◈┃• restart
+┃◈┃• shutdown
+┃◈┃• updatecmd
+┃◈┃• alive
+┃◈┃• ping 
+┃◈┃• gjid
+┃◈┃• jid
+┃◈└───────────┈⊷
+╰──────────────┈⊷
+╭━━〔 *Fun Menu* 〕━━┈⊷
+┃◈╭─────────────·๏
+┃◈┃• shapar
+┃◈┃• rate
+┃◈┃• insult
+┃◈┃• hack
+┃◈┃• ship
+┃◈┃• character
+┃◈┃• pickup 
+┃◈┃• joke
+┃◈┃• hrt
+┃◈┃• hpy
+┃◈┃• syd
+┃◈┃• anger
+┃◈┃• shy
+┃◈┃• kiss
+┃◈┃• mon
+┃◈┃• cunfuzed
+┃◈┃• setpp
+┃◈┃• hand
+┃◈┃• nikal
+┃◈┃• hold
+┃◈┃• hug
+┃◈┃• nikal
+┃◈┃• hifi
+┃◈┃• poke
+┃◈└───────────┈⊷
+╰──────────────┈⊷
+╭━━〔 *Convert Menu* 〕━━┈⊷
+┃◈╭─────────────·๏
+┃◈┃• sticker
+┃◈┃• sticker2
+┃◈┃• emojimix
+┃◈┃• fancy
+┃◈┃• take
+┃◈┃• tomp3
+┃◈┃• tts
+┃◈┃• trt
+┃◈┃• base64
+┃◈┃• unbase64
+┃◈┃• binary
+┃◈┃• dbinary
+┃◈┃• tinyurl
+┃◈┃• urldecode
+┃◈┃• urlencode
+┃◈┃• url
+┃◈┃• repeat 
+┃◈┃• ask
+┃◈┃• readmore
+┃◈└───────────┈⊷
+╰──────────────┈⊷
+╭━━〔 *Ai Menu* 〕━━┈⊷
+┃◈╭─────────────·๏
+┃◈┃• ai
+┃◈┃• gpt3
+┃◈┃• gpt2
+┃◈┃• gptmini
+┃◈┃• gpt
+┃◈┃• meta
+┃◈┃• blackbox
+┃◈┃• luma
+┃◈┃• dj 
+┃◈┃• khan
+┃◈┃• jawad
+┃◈┃• gpt4
+┃◈┃• bing
+┃◈┃• imagine 
+┃◈┃• imagine2
+┃◈┃• copilot
+┃◈└───────────┈⊷
+╰──────────────┈⊷
+╭━━〔 *Main Menu* 〕━━┈⊷
+┃◈╭─────────────·๏
+┃◈┃• ping
+┃◈┃• ping2
+┃◈┃• speed
+┃◈┃• live 
+┃◈┃• alive
+┃◈┃• runtime
+┃◈┃• uptime 
+┃◈┃• repo
+┃◈┃• owner
+┃◈┃• menu
+┃◈┃• menu2
+┃◈┃• restart
+┃◈└───────────┈⊷
+╰──────────────┈⊷
+╭━━〔 *Anime Menu* 〕━━┈⊷
+┃◈╭─────────────·๏
+┃◈┃• fack
+┃◈┃• truth
+┃◈┃• dare
+┃◈┃• dog
+┃◈┃• awoo
+┃◈┃• garl
+┃◈┃• waifu
+┃◈┃• neko
+┃◈┃• megnumin
+┃◈┃• neko
+┃◈┃• maid
+┃◈┃• loli
+┃◈┃• animegirl
+┃◈┃• animegirl
+┃◈┃• animegirl1
+┃◈┃• animegirl2
+┃◈┃• animegirl3
+┃◈┃• animegirl4
+┃◈┃• animegirl5
+┃◈┃• anime1
+┃◈┃• anime1
+┃◈┃• anime2
+┃◈┃• anime3
+┃◈┃• anime4
+┃◈┃• anime5
+┃◈┃• animenews
+┃◈┃• foxgirl
+┃◈┃• naruto
+┃◈└───────────┈⊷
+╰──────────────┈⊷
+╭━━〔 *Other Menu* 〕━━┈⊷
+┃◈╭─────────────·๏
+┃◈┃• timenow
+┃◈┃• date
+┃◈┃• count
+┃◈┃• calculate
+┃◈┃• countx
+┃◈┃• flip
+┃◈┃• coinflip
+┃◈┃• rcolor
+┃◈┃• roll
+┃◈┃• fact
+┃◈┃• cpp
+┃◈┃• rw
+┃◈┃• pair
+┃◈┃• pair2
+┃◈┃• pair3
+┃◈┃• fancy
+┃◈┃• logo <text>
+┃◈┃• define
+┃◈┃• news
+┃◈┃• movie
+┃◈┃• weather
+┃◈┃• srepo
+┃◈┃• insult
+┃◈┃• save
+┃◈┃• wikipedia
+┃◈┃• gpass
+┃◈┃• githubstalk
+┃◈┃• yts
+┃◈┃• ytv
+┃◈└───────────┈⊷
+╰──────────────┈⊷
+> ${config.DESCRIPTION}`;
 
-    await Matrix.sendMessage(m.from, {
-      image: fs.readFileSync('./media/Trex.jpg'),
-      caption: str,
-      contextInfo: {
-        mentionedJid: [m.sender],
-        forwardingScore: 999,
-        isForwarded: true,
-        forwardedNewsletterMessageInfo: {
-          newsletterJid: 'https://whatsapp.com/channel/0029VajJoCoLI8YePbpsnE3q',
-          newsletterName: "TREX-MD",
-          serverMessageId: 143
-        }
-      }
-    }, {
-      quoted: m
-    });
+        await conn.sendMessage(
+            from,
+            {
+                image: { url: `https://files.catbox.moe/7zfdcq.jpg` },
+                caption: dec,
+                contextInfo: {
+                    mentionedJid: [m.sender],
+                    forwardingScore: 999,
+                    isForwarded: true,
+                    forwardedNewsletterMessageInfo: {
+                        newsletterJid: '120363354023106228@newsletter',
+                        newsletterName: 'JawadTechX',
+                        serverMessageId: 143
+                    }
+                }
+            },
+            { quoted: mek }
+        );
 
-    // Send audio after sending the menu
-    await Matrix.sendMessage(m.from, {
-      audio: { url: 'https://files.catbox.moe/jlgpoy.mp3' },
-      mimetype: 'audio/mp4',
-      ptt: true
-    }, { quoted: m });
-  }
-};
-
-export default test;
+        // Send audio
+        await conn.sendMessage(from, {
+            audio: { url: 'https://github.com/JawadYTX/KHAN-DATA/raw/refs/heads/main/autovoice/menunew.m4a' },
+            mimetype: 'audio/mp4',
+            ptt: true
+        }, { quoted: mek });
+        
+    } catch (e) {
+        console.log(e);
+        reply(`${e}`);
+    }
+});
