@@ -95,26 +95,8 @@ async function start() {
                 }
             } else if (connection === 'open') {
                 if (initialConnection) {
-                    console.log(chalk.green("Connected Successfully TREX-MD 🤍"));
-            Matrix.sendMessage(Matrix.user.id, { 
-                image: { url: "https://files.catbox.moe/pf270b.jpg" }, 
-                caption: `*Hello there TREX-MD User! 👋🏻* 
-
-> Simple, Straightforward, But Loaded With Features 🎊. Meet TREX-MD WhatsApp Bot.
-
-*Thanks for using TREX-MD 🚩* 
-* > Regards BERA TECH 
-
-> Join WhatsApp Channel: ⤵️  
-https://whatsapp.com/channel/0029VajJoCoLI8YePbpsnE3q
-
-- *YOUR PREFIX:* = ${prefix}
-
-Don't forget to give a star to the repo ⬇️  
-https://github.com/Berabruce/TREX-MD
-
-> © Powered BY BERA TECH 🖤`
-            });
+                    console.log(chalk.green("TREX MD CONNECTED SUCCESSFULLY"));
+                    Matrix.sendMessage(Matrix.user.id, { text: `TREX-MD CONNECTED SUCCESSFULLY` });
                     initialConnection = false;
                 } else {
                     console.log(chalk.blue("♻️ Connection reestablished after restart."));
