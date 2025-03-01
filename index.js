@@ -66,7 +66,6 @@ async function downloadSessionData() {
     }
 }
 
-
 async function start() {
     try {
         const { state, saveCreds } = await useMultiFileAuthState(sessionDir);
@@ -88,15 +87,15 @@ async function start() {
             }
         });
 
-Matrix.ev.on('connection.update', (update) => {
-    const { connection, lastDisconnect } = update;
-    if (connection === 'close') {
-        if (lastDisconnect.error?.output?.statusCode !== DisconnectReason.loggedOut) {
-            start();
-        }
-    } else if (connection === 'open') {
-        if (initialConnection) {
-            console.log(chalk.green("Connected Successfully TREX-MD 🤍"));
+        Matrix.ev.on('connection.update', (update) => {
+            const { connection, lastDisconnect } = update;
+            if (connection === 'close') {
+                if (lastDisconnect.error?.output?.statusCode !== DisconnectReason.loggedOut) {
+                    start();
+                }
+            } else if (connection === 'open') {
+                if (initialConnection) {
+                               console.log(chalk.green("Connected Successfully TREX-MD 🤍"));
             Matrix.sendMessage(Matrix.user.id, { 
                 image: { url: "https://i.ibb.co/4jBhn13/Socialthumb.jpg" }, 
                 caption: `*Hello there TREX-MD User! 👋🏻* 
@@ -115,13 +114,13 @@ https://github.com/Berabruce/TREX-MD
 
 > © Powered BY BERA TECH `
             });
-            initialConnection = false;
-        } else {
-            console.log(chalk.blue("♻️ Connection reestablished after restart."));
-        }
-    }
-});
-        
+             initialConnection = false;
+                } else {
+                    console.log(chalk.blue("♻️ Connection reestablished after restart."));
+                }
+            }
+        });
+
         Matrix.ev.on('creds.update', saveCreds);
 
         Matrix.ev.on("messages.upsert", async chatUpdate => await Handler(chatUpdate, Matrix, logger));
@@ -137,7 +136,6 @@ https://github.com/Berabruce/TREX-MD
         Matrix.ev.on('messages.upsert', async (chatUpdate) => {
             try {
                 const mek = chatUpdate.messages[0];
-                console.log(mek);
                 if (!mek.key.fromMe && config.AUTO_REACT) {
                     console.log(mek);
                     if (mek.message) {
@@ -149,27 +147,6 @@ https://github.com/Berabruce/TREX-MD
                 console.error('Error during auto reaction:', err);
             }
         });
-        
-        Matrix.ev.on('messages.upsert', async (chatUpdate) => {
-    try {
-        const mek = chatUpdate.messages[0];
-        const fromJid = mek.key.participant || mek.key.remoteJid;
-        if (!mek || !mek.message) return;
-        if (mek.key.fromMe) return;
-        if (mek.message?.protocolMessage || mek.message?.ephemeralMessage || mek.message?.reactionMessage) return; 
-        if (mek.key && mek.key.remoteJid === 'status@broadcast' && config.AUTO_STATUS_SEEN) {
-            await Matrix.readMessages([mek.key]);
-            
-            if (config.AUTO_STATUS_REPLY) {
-                const customMessage = config.STATUS_READ_MSG || '✅ Auto Status Seen Bot By JAWAD-MD';
-                await Matrix.sendMessage(fromJid, { text: customMessage }, { quoted: mek });
-            }
-        }
-    } catch (err) {
-        console.error('Error handling messages.upsert event:', err);
-    }
-});
-
     } catch (error) {
         console.error('Critical Error:', error);
         process.exit(1);
