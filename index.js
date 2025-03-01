@@ -70,20 +70,20 @@ async function start() {
     try {
         const { state, saveCreds } = await useMultiFileAuthState(sessionDir);
         const { version, isLatest } = await fetchLatestBaileysVersion();
-        console.log(`Trex  md using WA v${version.join('.')}, isLatest: ${isLatest}`);
+        console.log(`joel md using WA v${version.join('.')}, isLatest: ${isLatest}`);
         
         const Matrix = makeWASocket({
             version,
             logger: pino({ level: 'silent' }),
             printQRInTerminal: useQR,
-            browser: ["TREX MD", "safari", "3.3"],
+            browser: ["ʝσєℓ χ∂", "safari", "3.3"],
             auth: state,
             getMessage: async (key) => {
                 if (store) {
                     const msg = await store.loadMessage(key.remoteJid, key.id);
                     return msg.message || undefined;
                 }
-                return { conversation: "trex md  whatsapp user bot" };
+                return { conversation: "joel md  whatsapp user bot" };
             }
         });
 
@@ -95,30 +95,27 @@ async function start() {
                 }
             } else if (connection === 'open') {
                 if (initialConnection) {
-                    console.log(chalk.green("INTEGRATION SUCCESSFULL"));
-                    Matrix.sendMessage(Matrix.user.id, { text: `INTERGRATION SUCCESSFULL ` });
-                    const getGreeting = () => {
-        const currentHour = DateTime.now().setZone("Africa/Nairobi").hour;
-        if (currentHour >= 5 && currentHour < 12) return "Good morning 🌄";
-        if (currentHour >= 12 && currentHour < 18) return "Good afternoon ☀️";
-        if (currentHour >= 18 && currentHour < 22) return "Good evening 🌆";
-        return "Good night 😴";
-      };
+                    console.log(chalk.green("Connected Successfully TREX-MD 🤍"));
+            Matrix.sendMessage(Matrix.user.id, { 
+                image: { url: "https://files.catbox.moe/pf270b.jpg" }, 
+                caption: `*Hello there TREX-MD User! 👋🏻* 
 
-      const message = `Holla, ${getGreeting()},\n\n╭═══『BERA MD IS CONNECTED SUCCESSFULLY 』══⊷ \n` +
-        `║ ʙᴏᴛ ɴᴀᴍᴇ ${botname}\n` +
-        `║ �ᴍᴏᴅᴇ ${mode}\n` +
-        `║ ᴘʀᴇғɪx [  ${prefix} ]\n` +
-        `║ ᴛᴏᴛᴀʟ ᴘʟᴜɢɪɴs ${totalCommands}\n` +
-        `║ ᴛɪᴍᴇ ${DateTime.now().setZone("Africa/Nairobi").toLocaleString(DateTime.TIME_SIMPLE)}\n` +
-        `║ ʟɪʙʀᴀʀʏ Baileys\n` +
-        `╰═════════════════⊷`;
+> Simple, Straightforward, But Loaded With Features 🎊. Meet TREX-MD WhatsApp Bot.
 
-      await client.sendMessage(client.user.id, { text: message });
-    }
-  });
-    
-                  initialConnection = false;
+*Thanks for using TREX-MD 🚩* 
+* > Regards BERA TECH 
+
+> Join WhatsApp Channel: ⤵️  
+https://whatsapp.com/channel/0029VajJoCoLI8YePbpsnE3q
+
+- *YOUR PREFIX:* = ${prefix}
+
+Don't forget to give a star to the repo ⬇️  
+https://github.com/Berabruce/TREX-MD
+
+> © Powered BY BERA TECH 🖤`
+            });
+                    initialConnection = false;
                 } else {
                     console.log(chalk.blue("♻️ Connection reestablished after restart."));
                 }
