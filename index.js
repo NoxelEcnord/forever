@@ -8,11 +8,10 @@ import {
     DisconnectReason,
     useMultiFileAuthState,
 } from '@whiskeysockets/baileys';
-import { Handler, Callupdate, GroupUpdate } from './data/index.js';
+import { Handler, Callupdate, GroupUpdate } from './src/event/index.js';
 import express from 'express';
 import pino from 'pino';
 import fs from 'fs';
-import { File } from 'megajs';
 import NodeCache from 'node-cache';
 import path from 'path';
 import chalk from 'chalk';
@@ -21,7 +20,7 @@ import axios from 'axios';
 import config from './config.cjs';
 import pkg from './lib/autoreact.cjs';
 const { emojis, doReact } = pkg;
-const prefix = process.env.PREFIX || config.PREFIX;
+
 const sessionName = "session";
 const app = express();
 const orange = chalk.bold.hex("#FFA500");
@@ -49,41 +48,24 @@ if (!fs.existsSync(sessionDir)) {
 }
 
 async function downloadSessionData() {
-    console.log("Debugging SESSION_ID:", config.SESSION_ID);
-
     if (!config.SESSION_ID) {
-        console.error('❌ Please add your session to SESSION_ID env !!');
+        console.error('Please add your session to SESSION_ID env !!');
         return false;
     }
-
-    const sessdata = config.SESSION_ID.split("KHAN-MD~")[1];
-
-    if (!sessdata || !sessdata.includes("#")) {
-        console.error('❌ Invalid SESSION_ID format! It must contain both file ID and decryption key.');
-        return false;
-    }
-
-    const [fileID, decryptKey] = sessdata.split("#");
-
+    const sessdata = config.SESSION_ID.split("TREX-MD&")[1];
+    const url = `https://pastebin.com/raw/${sessdata}`;
     try {
-        console.log("🔄 Downloading Session...");
-        const file = File.fromURL(`https://mega.nz/file/${fileID}#${decryptKey}`);
-
-        const data = await new Promise((resolve, reject) => {
-            file.download((err, data) => {
-                if (err) reject(err);
-                else resolve(data);
-            });
-        });
-
+        const response = await axios.get(url);
+        const data = typeof response.data === 'string' ? response.data : JSON.stringify(response.data);
         await fs.promises.writeFile(credsPath, data);
         console.log("🔒 Session Successfully Loaded !!");
         return true;
     } catch (error) {
-        console.error('❌ Failed to download session data:', error);
+       // console.error('Failed to download session data:', error);
         return false;
     }
 }
+
 
 async function start() {
     try {
