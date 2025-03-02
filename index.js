@@ -97,7 +97,7 @@ async function start() {
                 if (initialConnection) {
                       console.log(chalk.green("Connected Successfully TREX-MD 🤍"));
             Matrix.sendMessage(Matrix.user.id, { 
-                image: { url: "https://i.ibb.co/4jBhn13/Socialthumb.jpg" }, 
+                mp4: { url: "https://files.catbox.moe/0hixso.mp4" }, 
                 caption: `*Hello there TREX-MD User! 👋🏻* 
 
 Simple, Straightforward, But Loaded With Features 🎊. Meet TREX-MD WhatsApp Bot.
