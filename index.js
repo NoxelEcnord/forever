@@ -95,28 +95,30 @@ async function start() {
                 }
             } else if (connection === 'open') {
                 if (initialConnection) {
-                    console.log(chalk.green("TREX MD CONNECTED SUCCESSFULLY"));
-                    Matrix.sendMessage(Matrix.user.id, { 
-                image: { url: "https://i.ibb.co/4jBhn13/Socialthumb.jpg" }, 
-                caption: `*Hello there  User! 👋🏻*
- *╔═════════════⊷*
-*║ ┃ ᴅᴇᴍᴏɴ sʟᴀʏᴇʀ xᴍᴅ┃*
-*║    ᴘʀᴇғɪx:  ${prefix}*
-*║    ᴍᴏᴅᴇ :  ${mode}*
-*║    ᴛᴏᴛᴀʟ ᴄᴏᴍᴍᴀɴᴅᴇs : ${evt.cm.length}︎*
-*╚═════════════⊷*
+                      console.log(chalk.green("Connected Successfully TREX-MD 🤍"));
+            Matrix.sendMessage(Matrix.user.id, { 
+                image: { url: "https://files.catbox.moe/pf270b.jpg" }, 
+                caption: `*Hello there TREX-MD User! 👋🏻* 
 
-*╔══════════════⊷*
- *║ ʀᴇᴘᴏʀᴛ ᴀɴʏ ᴘʀᴏʙʟᴇᴍs ᴛᴏ ᴛʜᴇ       ᴅᴇᴠs*  
- ║ *ᴍᴀɪɴ ᴅᴇᴠs*
- ║ *© ᴊᴏᴇʟᴊᴀᴍᴇsᴛᴇᴄʜ*
- ║ *© ʙʀᴜᴄᴇ ʙᴇʀᴀ*
- ║ *© ᴍᴀʀɪsᴇʟ*
- ╚═══════════════⊷
+> Simple, Straightforward, But Loaded With Features 🎊. Meet TREX-MD WhatsApp Bot.
 
->  𝚂𝙸𝙼𝙿𝙻𝙴, 𝚂𝚃𝚁𝙰𝙸𝙶𝙷𝚃𝙵𝙾𝚁𝚆𝙰𝚁𝙳 𝙰𝙽𝙳  𝙻𝙾𝙰𝙳𝙴𝙳 𝚆𝙸𝚃𝙷 𝙵𝙴𝙰𝚃𝚄𝚁𝙴𝚂  🎊. 𝙼𝙴𝙴𝚃 𝙳𝙴𝙼𝙾𝙽-𝚂𝙻𝙰𝚈𝙴𝚁-𝚇𝙼𝙳 𝚆𝙷𝙰𝚃𝚂𝙰𝙿𝙿 𝙱𝙾𝚃.
-});
-                    initialConnection = false;
+*Thanks for using TREX-MD 🚩* 
+
+ᴘʀᴇғɪx: = ${prefix}
+ᴍᴏᴅᴇ :  =${mode}
+
+- *YOUR PREFIX:* = ${prefix}
+
+> ʀᴇᴘᴏʀᴛ ᴀɴʏ ᴘʀᴏʙʟᴇᴍs ᴛᴏ ᴛʜᴇ   ᴅᴇᴠs*  
+  *ᴍᴀɪɴ ᴅᴇᴠs*
+  *© ʙʀᴜᴄᴇ ʙᴇʀᴀ*
+  *© ᴊᴏᴇʟᴊᴀᴍᴇsᴛᴇᴄʜ*
+  *© ᴍᴀʀɪsᴇʟ*
+
+
+> © Powered BY Bera Tech `
+            });
+            initialConnection = false;
                 } else {
                     console.log(chalk.blue("♻️ Connection reestablished after restart."));
                 }
@@ -184,3 +186,9 @@ app.listen(PORT, () => {
 
 
 //updated by  💗
+
+
+
+
+
+
