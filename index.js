@@ -102,18 +102,11 @@ async function start() {
 
 Simple, Straightforward, But Loaded With Features 🎊. Meet TREX-MD WhatsApp Bot.
 REPORT ANY PROBLEM TO THE FOLLOWING MAIN DEVS 
- 
-
-
-
  *MAIN DEVS*
 © BRUCE BERA
 © JOEL JAMES  
 © MARISEL 
-
-  
- YOUR PREFIX:* = ${prefix}
-                    
+                   
     
 > © Powered BY Bera Tech `
             });
