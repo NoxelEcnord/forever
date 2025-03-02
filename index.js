@@ -101,17 +101,11 @@ async function start() {
                 caption: `*Hello there TREX-MD User! 👋🏻* 
 
 > Simple, Straightforward, But Loaded With Features 🎊. Meet TREX-MD WhatsApp Bot.
-
-*Thanks for using TREX-MD 🚩* 
-
-- *YOUR PREFIX:* = ${prefix}
-
 > REPORT ANY PROBLEM TO THE FOLLOWING MAIN DEVS 
   *MAIN DEVS*
-  *© BRUCE BERA*
-  *© JOEL JAMES*
-  *© MARISEL*
-
+  © BRUCE BERA
+  © JOEL JAMES
+  © MARISEL
 
 > © Powered BY Bera Tech `
             });
