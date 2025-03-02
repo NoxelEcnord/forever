@@ -105,13 +105,13 @@ REPORT ANY PROBLEM TO THE FOLLOWING MAIN DEVS
  
 
 
-*╔───⬡*
-*| *MAIN DEVS*
- | © BRUCE BERA
-*| © JOEL JAMES   
-*| © MARISEL 
-*╚─────────────────···▸▸*  
-   
+
+ *MAIN DEVS*
+© BRUCE BERA
+© JOEL JAMES  
+© MARISEL 
+
+  
  YOUR PREFIX:* = ${prefix}
                     
     
