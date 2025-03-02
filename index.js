@@ -104,16 +104,13 @@ async function start() {
 
 *Thanks for using TREX-MD 🚩* 
 
-ᴘʀᴇғɪx: = ${prefix}
-ᴍᴏᴅᴇ :  =${mode}
-
 - *YOUR PREFIX:* = ${prefix}
 
-> ʀᴇᴘᴏʀᴛ ᴀɴʏ ᴘʀᴏʙʟᴇᴍs ᴛᴏ ᴛʜᴇ   ᴅᴇᴠs*  
-  *ᴍᴀɪɴ ᴅᴇᴠs*
-  *© ʙʀᴜᴄᴇ ʙᴇʀᴀ*
-  *© ᴊᴏᴇʟᴊᴀᴍᴇsᴛᴇᴄʜ*
-  *© ᴍᴀʀɪsᴇʟ*
+> REPORT ANY PROBLEM TO THE FOLLOWING MAIN DEVS 
+  *MAIN DEVS*
+  *© BRUCE BERA*
+  *© JOEL JAMES*
+  *© MARISEL*
 
 
 > © Powered BY Bera Tech `
