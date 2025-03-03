@@ -1,4 +1,3 @@
-
 import moment from 'moment-timezone';
 import pkg from '@whiskeysockets/baileys';
 const { generateWAMessageFromContent, proto } = pkg;
@@ -69,23 +68,24 @@ const allMenu = async (m, sock) => {
   if (cmd === "menu") {
     await m.React('⏳'); // React with a loading icon
     const aliveMessage = `
-╭───❍「 *𝖳𝖱𝖤𝖷 𝖬𝖣* 」
-│ 🧑‍💻 *User:* ${pushName} ${pushwish}
-│ 🌐 *Mode:* mode
-│ ⏰ *Time:*{realTime}
-│ 🚀 *UPTime:${days}d ${hours}h ${minutes}m ${seconds}s
+ 
+╭───❍「 *TREX MD* 」
+│ 🧑‍💻 *𝚄𝚜𝚎𝚛:* ${pushName} ${pushwish}
+│ 🌐 *𝙼𝚘𝚍𝚎:* ${mode}
+│ ⏰ *𝚃𝚒𝚖𝚎:* ${realTime}
+│ 🚀 *𝚄𝚙𝚃𝚒𝚖𝚎:* ${days}d ${hours}h ${minutes}m ${seconds}s
 ╰───────────❍
-╭───❍「 * 𝖳𝖱𝖤𝖷 𝖬𝖣 MENU LIST* 」
-*│* 💙 ${prefix}Islamicmenu*
-*│* 📥 ${prefix}downloadmenu*
-*│* 🤖 ${prefix}Aimenmenu*
-*│* 💭 ${prefix}Searchmenu*
-*│* ⚙️ ${prefix}Toolsmenu*
-*│* ©️ ${prefix}Logomenu*
-*│* 🫂 ${prefix}Groupmenu*
+╭───❍「 * TREX MD MENU LIST* 」
+*│* 💙 *${prefix}Islamicmenu*
+*│* 📥 *${prefix}downloadmenu*
+*│* 🤖 *${prefix}Aimenmenu*
+*│* 💭 *${prefix}Searchmenu*
+*│* ⚙️ *${prefix}Toolsmenu*
+*│* ©️ *${prefix}Logomenu*
+*│* 🫂 *${prefix}Groupmenu*
 ╰───────────❍ 
 ╭───────────❍
-│Powered By 𝖡𝖤𝖱𝖠 𝖳𝖤𝖢𝖧
+│Powered By Bera tech
 ╰───────────❍
 `;
 
@@ -97,20 +97,21 @@ const allMenu = async (m, sock) => {
     await m.React('⏳'); // React with a loading icon
 
     const islamicmenuMessage = `
-╭───❍「 *𝖳𝖱𝖤𝖷 𝖬𝖣*」
-│ User:   ${pushName} ${pushwish}
-│ Mode:    mode
-│ Time:   ${realTime}
-│ Uptime: ${days}d ${hours}h ${minutes}m ${seconds}s
+ 
+╭───❍「 *TREX MD* 」
+│ 🧑‍💻 *𝚄𝚜𝚎𝚛:* ${pushName} ${pushwish}
+│ 🌐 *𝙼𝚘𝚍𝚎:* ${mode}
+│ ⏰ *𝚃𝚒𝚖𝚎:* ${realTime}
+│ 🚀 *𝚄𝚙𝚃𝚒𝚖𝚎:* ${days}d ${hours}h ${minutes}m ${seconds}s
 ╰───────────❍
 ╭───❍「 *ISLAMIC MENU* 」
-*│* 💙 ${prefix}Surahaudio*
-*│* 💙 ${prefix}Surahurdu*
-*│* 💙 ${prefix}Asmaulhusna*
-*│* 💙 ${prefix}Prophetname*
+*│* 💙 *${prefix}Surahaudio*
+*│* 💙 *${prefix}Surahurdu*
+*│* 💙 *${prefix}Asmaulhusna*
+*│* 💙 *${prefix}Prophetname*
 ╰───────────❍  
 ╭───────────❍
-│𝖳𝖱𝖤𝖷 𝖬𝖣
+│TREX MD
 ╰───────────❍
 `;
 await m.React('✅'); // React with success icon
@@ -121,37 +122,29 @@ await m.React('✅'); // React with success icon
     await m.React('⏳'); // React with a loading icon
 
     const downloadmenuMessage = `
-───❍「 *𝖳𝖱𝖤𝖷 𝖬𝖣* 」
-│ User: ${pushName} ${pushwish}
-│ Mode: ${mode}
-│ Time: ${realTime}
-│ Uptime: ${days}d ${hours}h ${minutes}m ${seconds}s
+
+   
+╭───❍「 *TREX MD* 」
+│ 🧑‍💻 *𝚄𝚜𝚎𝚛:* ${pushName} ${pushwish}
+│ 🌐 *𝙼𝚘𝚍𝚎:* ${mode}
+│ ⏰ *𝚃𝚒𝚖𝚎:* ${realTime}
+│ 🚀 *𝚄𝚙𝚃𝚒𝚖𝚎:* ${days}d ${hours}h ${minutes}m ${seconds}s
 ╰───────────❍
-╭───❍「 *DOWNLOAD MENU * 」
-*┋*⏬️ ${prefix}Fb
-*┋*⏬️ ${prefix}Fb2
-*┋*⏬️ ${prefix}Fb3
-*┋*⏬️ ${prefix}Insta
-*┋*⏬️ $prefixInsta2
-*┋*⏬️ ${prefix}Play
-*┋*⏬️ ${prefix}Song
-*┋*⏬️ ${prefix}Video
-*┋*⏬️ ${prefix}Ytv
-*┋*⏬️ ${prefix}Twitter
-*┋*⏬️ ${prefix}Twitter2
-*┋*⏬️ ${prefix}TwitAudio
-*┋*⏬️ ${prefixTiktok
-*┋*⏬️ ${prefix}Tiktok2
-*┋*⏬️ ${prefixYtmp3
-*┋*⏬️ ${prefix}Ytmp4
-*┋*⏬️ ${prefix}MediaFire
-*┋*⏬️ ${prefix}MediaFire2
-*┋*⏬️ ${prefix}Spotify2
-*┋*⏬️ ${prefix}Gdrive
-*┋*⏬️ ${prefix}Apk
-╰───────────❍   
+ ╭───❍「 *DOWNLOAD MENU * 」
+*┋*⏬️ *${prefix}Fb*
+*┋*⏬️ *${prefix}Insta*
+*┋*⏬️ *${prefix}Insta2*
+*┋*⏬️ *${prefix}Play*
+*┋*⏬️ *${prefix}Song*
+*┋*⏬️ *${prefix}Video*
+*┋*⏬️ *${prefix}TwitAudio*
+*┋*⏬️ *${prefix}Tiktok*
+*┋*⏬️ *${prefix}Tiktok2*
+*┋*⏬️ *${prefix}MediaFire2*
+*┋*⏬️ *${prefix}Apk*
+ ╰───────────❍   
 ╭───────────❍
-│𝖳𝖱𝖤𝖷 𝖬𝖣
+│TREX MD
 ╰──────────
 `;
 await m.React('✅'); // React with success icon
@@ -162,13 +155,13 @@ await m.React('✅'); // React with success icon
     await m.React('⏳'); // React with a loading icon
 
     const aimenuMessage = `
-╭───❍「 *𝖳𝖱𝖤𝖷 𝖬𝖣* 」
+╭───❍「 *TREX MD* 」
 │ 🧑‍💻 *𝚄𝚜𝚎𝚛:* ${pushName} ${pushwish}
 │ 🌐 *𝙼𝚘𝚍𝚎:* ${mode}
 │ ⏰ *𝚃𝚒𝚖𝚎:* ${realTime}
 │ 🚀 *𝚄𝚙𝚃𝚒𝚖𝚎:* ${days}d ${hours}h ${minutes}m ${seconds}s
 ╰───────────❍
-╭───❍「 *𝖳𝖱𝖤𝖷 𝖬𝖣* 」
+╭───❍「 *TREX MD* 」
 *┋*🧠 *${prefix}𝙶𝚙𝚝*
 *┋*🧠 *${prefix}𝙼𝚎𝚝𝚊*
 *┋*🧠 *${prefix}𝙱𝚕𝚊𝚌𝚔𝙱𝚘𝚡*
@@ -177,7 +170,7 @@ await m.React('✅'); // React with success icon
 *┋*🧠 *${prefix}𝙼𝚒𝚡𝚝𝚛𝚊𝚕*
 ╰───────────❍
 ╭───────────❍
-│𝖳𝖱𝖤𝖷 𝖬𝖣
+│TREX MD BOT
 ╰───────────❍
 `;
 await m.React('✅'); // React with success icon
@@ -188,13 +181,13 @@ await m.React('✅'); // React with success icon
     await m.React('⏳'); // React with a loading icon
 
     const logomenuMessage = `
-╭───❍「 *𝖳𝖱𝖤𝖷 𝖬𝖣* 」
+╭───❍「 *TREX MD* 」
 │ 🧑‍💻 *𝚄𝚜𝚎𝚛:* ${pushName} ${pushwish}
 │ 🌐 *𝙼𝚘𝚍𝚎:* ${mode}
 │ ⏰ *𝚃𝚒𝚖𝚎:* ${realTime}
 │ 🚀 *𝚄𝚙𝚃𝚒𝚖𝚎:* ${days}d ${hours}h ${minutes}m ${seconds}s
 ╰───────────❍
-╭───❍「 *𝖳𝖱𝖤𝖷 𝖬𝖣* 
+╭───❍「 *joel md* 
 *┋* © *${prefix}𝙻𝚘𝙶𝚘*
 *┋* ©️ *${prefix}𝙻𝚘𝙶𝚘1*
 *┋* ©️ *${prefix}𝙻𝚘𝙶𝚘2*
@@ -217,7 +210,7 @@ await m.React('✅'); // React with success icon
 *┋* ©️ *${prefix}𝙻𝚘𝙶𝚘18*
 *┋* ©️ *${prefix}𝙻𝚘𝙶𝚘19*
 ╭───────────❍
-│𝖳𝖱𝖤𝖷 𝖬𝖣 
+│joel tech 
 ╰───────────❍
 `;
 
@@ -229,13 +222,13 @@ await m.React('✅'); // React with success icon
     await m.React('⏳'); // React with a loading icon
 
     const stalkerMessage = `
-╭───❍「 *𝖳𝖱𝖤𝖷 𝖬𝖣* 」
+╭───❍「 *TREX MD* 」
 │ 🧑‍💻 *𝚄𝚜𝚎𝚛:* ${pushName} ${pushwish}
 │ 🌐 *𝙼𝚘𝚍𝚎:* ${mode}
 │ ⏰ *𝚃𝚒𝚖𝚎:* ${realTime}
 │ 🚀 *𝚄𝚙𝚃𝚒𝚖𝚎:* ${days}d ${hours}h ${minutes}m ${seconds}s
 ╰───────────❍
-╭───❍「 *𝖳𝖱𝖤𝖷 𝖬𝖣* 
+╭───❍「 *TREX MD* 
 *┋* 🫂 *${prefix}𝙾𝚙𝚎𝚗*
 *┋* 🫂 *${prefix}𝙲𝚕𝚘𝚜𝚎*
 *┋* 🫂 *${prefix}𝚃𝚊𝚐𝚊𝚕𝚕*
@@ -244,7 +237,7 @@ await m.React('✅'); // React with success icon
 *┋* 🫂 *${prefix}𝙳𝚒𝚜 24𝚑*
 *┋* 🫂 *${prefix}𝙸𝚗𝚟𝚒𝚝𝚎*
 ╭───────────❍
-│BERA TECH
+│TREX MD 
 ╰───────────❍
 `;
 await m.React('✅'); // React with success icon
@@ -256,13 +249,13 @@ await m.React('✅'); // React with success icon
     await m.React('⏳'); // React with a loading icon
 
     const stickerMessage = `
-╭───❍「 *𝖳𝖱𝖤𝖷 𝖬𝖣* 」
+╭───❍「 *TREX MD* 」
 │ 🧑‍💻 *𝚄𝚜𝚎𝚛:* ${pushName} ${pushwish}
 │ 🌐 *𝙼𝚘𝚍𝚎:* ${mode}
 │ ⏰ *𝚃𝚒𝚖𝚎:* ${realTime}
 │ 🚀 *𝚄𝚙𝚃𝚒𝚖𝚎:* ${days}d ${hours}h ${minutes}m ${seconds}s
 ╰───────────❍
- ╭───❍「 *𝖳𝖱𝖤𝖷 𝖬𝖣* 」
+ ╭───❍「 *TREX MD* 」
 *┋*📡 *${prefix}𝚈𝚝𝚜*
 *┋*📡 *${prefix}𝙶𝚒𝚝𝚜*
 *┋*📡 *${prefix}𝚃𝚒𝚔𝚜*
@@ -270,7 +263,7 @@ await m.React('✅'); // React with success icon
 *┋*📡 *${prefix}𝚂𝚙𝚘𝚝𝚒𝚏𝚢*
 ╰───────────❍
 ╭───────────❍
-│BERA TECH
+│TREX MD
 ╰───────────❍
 `;
 await m.React('✅'); // React with success icon
@@ -281,13 +274,13 @@ await m.React('✅'); // React with success icon
     await m.React('⏳'); // React with a loading icon
 
     const ownerMessage = `
-    ╭───❍「 *𝖳𝖱𝖤𝖷 𝖬𝖣* 」
+    ╭───❍「 *TREX MD* 」
 │ 🧑‍💻 *𝚄𝚜𝚎𝚛:* ${pushName} ${pushwish}
 │ 🌐 *𝙼𝚘𝚍𝚎:* ${mode}
 │ ⏰ *𝚃𝚒𝚖𝚎:* ${realTime}
 │ 🚀 *𝚄𝚙𝚃𝚒𝚖𝚎:* ${days}d ${hours}h ${minutes}m ${seconds}s
 ╰───────────❍
- ╭───❍「 *𝖳𝖱𝖤𝖷 𝖬𝖣* 」
+ ╭───❍「 *TREX MD* 」
 *┋*💫 *${prefix}𝚁𝚎𝚜𝚝𝚊𝚛𝚝*
 *┋*💫 *${prefix}𝙾𝚠𝚗𝚎𝚛𝚁𝚎𝚊𝚌𝚝*
 *┋*💫 *${prefix}𝙷𝚎𝚊𝚛𝚝𝚁𝚎𝚊𝚌𝚝*
@@ -297,9 +290,9 @@ await m.React('✅'); // React with success icon
 *┋*💫 *${prefix}𝚅𝚟*
 *┋*💫 *${prefix}𝚅𝚟2*
 *┋*💫 *${prefix}𝙳𝚎𝚕𝚎𝚝𝚎*
-*┋*💫 *         𝚂𝚊𝚟𝚎*
+*┋*💫 *${prefix}𝚂𝚊𝚟𝚎*
 ╭───────────❍
-│BERA TECH
+│HELLO ${pushName} ${pushwish}
 ╰───────────❍
 `;
 
@@ -311,13 +304,13 @@ await m.React('✅'); // React with success icon
     await m.React('⏳'); // React with a loading icon
 
     const otherMessage = `
-╭───❍「 *𝖳𝖱𝖤𝖷 𝖬𝖣* 」
+╭───❍「 *TREX MD* 」
 │ 🧑‍💻 *𝚄𝚜𝚎𝚛:* ${pushName} ${pushwish}
 │ 🌐 *𝙼𝚘𝚍𝚎:* ${mode}
 │ ⏰ *𝚃𝚒𝚖𝚎:* ${realTime}
 │ 🚀 *𝚄𝚙𝚃𝚒𝚖𝚎:* ${days}d ${hours}h ${minutes}m ${seconds}s
 ╰───────────❍
-╭───❍「 *𝖳𝖱𝖤𝖷 𝖬𝖣* 」
+╭───❍「 *TREX MD* 」
 *│ *🗿 *${prefix}𝙿𝚒𝚗𝚐*
 *│ *🗿 *${prefix}𝙰𝚋𝚘𝚞𝚝*
 *│ *🗿 *${prefix}𝚛𝚎𝚙𝚘*
@@ -326,7 +319,7 @@ await m.React('✅'); // React with success icon
 *│ *🗿 *${prefix}𝚂𝚎𝚗𝚍𝚖𝚎*
 ╰───────────❍   
 ╭───────────❍
-│BERA TECH
+│joel tech
 ╰───────────❍
 `;
 await m.React('✅'); // React with success icon
@@ -335,30 +328,28 @@ await m.React('✅'); // React with success icon
     if (cmd === "toolsmenu") {
     await m.React('⏳'); // React with a loading icon
     const toolsMessage = `
-╭───❍「 *𝖳𝖱𝖤𝖷 𝖬𝖣* 」
+╭───❍「 *joel md* 」
 │ 🧑‍💻 *𝚄𝚜𝚎𝚛:* ${pushName} ${pushwish}
 │ 🌐 *𝙼𝚘𝚍𝚎:* ${mode}
 │ ⏰ *𝚃𝚒𝚖𝚎:* ${realTime}
 │ 🚀 *𝚄𝚙𝚃𝚒𝚖𝚎:* ${days}d ${hours}h ${minutes}m ${seconds}s
 ╰───────────❍
-╭───❍「 *𝖳𝖱𝖤𝖷 𝖬𝖣* 」
-*┋*🛡  *${prefix}𝚂𝚜*
-*┋*🛡  *${prefix}𝚆𝚎𝚋𝚜𝚜*
-*┋*🛡  *${prefix}𝙵𝚞𝚕𝚕𝚜𝚜*
-*┋*🛡  *${prefix}𝚃𝚛𝚝*
-*┋*🛡  *${prefix}𝙵𝚎𝚝𝚌𝚑*
-*┋*🛡  *${prefix}𝚃𝚎𝚡𝚝2𝚒𝚖𝚐*
+╭───❍「 *TREX MD* 」
+*┋*🛡  * ${prefix}𝚂𝚜 *
+*┋*🛡  * ${prefix}𝚆𝚎𝚋𝚜𝚜 *
+*┋*🛡  * ${prefix}𝙵𝚞𝚕𝚕𝚜𝚜 *
+*┋*🛡  * ${prefix}𝚃𝚛𝚝 *
+*┋*🛡  * ${prefix}𝙵𝚎𝚝𝚌𝚑 *
+*┋*🛡  * ${prefix}𝚃𝚎𝚡𝚝2𝚒𝚖𝚐 *
 ╰───────────❍  
 ╭───────────❍
-│BERA TECH
+│THANKS ${pushName} ${pushwish}
 ╰───────────❍
 `;
 await m.React('✅'); // React with success icon
     await sendCommandMessage(toolsMessage);
   }
 };
-// coded by bera tech 
+// coded by lord joel
 
 export default allMenu;
-
-
