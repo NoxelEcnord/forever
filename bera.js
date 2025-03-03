@@ -70,7 +70,7 @@ async function start() {
     try {
         const { state, saveCreds } = await useMultiFileAuthState(sessionDir);
         const { version, isLatest } = await fetchLatestBaileysVersion();
-        console.log(`joel md using WA v${version.join('.')}, isLatest: ${isLatest}`);
+        console.log(`TREX MD using WA v${version.join('.')}, isLatest: ${isLatest}`);
         
         const Matrix = makeWASocket({
             version,
@@ -83,7 +83,7 @@ async function start() {
                     const msg = await store.loadMessage(key.remoteJid, key.id);
                     return msg.message || undefined;
                 }
-                return { conversation: "joel md  whatsapp user bot" };
+                return { conversation: "TREX MD  whatsapp user bot" };
             }
         });
 
@@ -95,12 +95,12 @@ async function start() {
                 }
             } else if (connection === 'open') {
                 if (initialConnection) {
-                      console.log(chalk.green("Connected Successfully TREX-MD 🤍"));
+                      console.log(chalk.green("TREX MD IS CONNECTED SUCCESSFULLY  "));
             Matrix.sendMessage(Matrix.user.id, { 
                 video: { url: "https://files.catbox.moe/0hixso.mp4" }, 
-                caption: `*Hello there TREX-MD User! 👋🏻* 
+                caption: `*Hello there TREX MD User! 👋🏻* 
 
-Simple, Straightforward, But Loaded With Features 🎊. Meet TREX-MD WhatsApp Bot.
+Simple, Straightforward, and Loaded With Features 🎊. Meet TREX MD WhatsApp Bot.
 REPORT ANY PROBLEM TO THE FOLLOWING MAIN DEVS 
  *MAIN DEVS*
 © BRUCE BERA
@@ -108,7 +108,7 @@ REPORT ANY PROBLEM TO THE FOLLOWING MAIN DEVS
 © MARISEL 
                    
     
-> © Powered BY Bera Tech `
+> © MADE BY  BERA TECH TEAM`
             });
             initialConnection = false;
                 } else {
@@ -169,7 +169,7 @@ async function init() {
 init();
 
 app.get('/', (req, res) => {
-    res.send('TREX MD RUNNING PROPERLY');
+    res.send('TREX MD CONNECTED SUCCESSFULLY ');
 });
 
 app.listen(PORT, () => {
@@ -178,9 +178,5 @@ app.listen(PORT, () => {
 
 
 //updated by  💗
-
-
-
-
 
 
