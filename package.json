@@ -2,10 +2,10 @@
   "name": "TREX-MD",
   "version": "10.8.1",
   "description": "TREX-MD latest multi device whatsapp bot",
-  "main": "index.js",
+  "main": "bera.js",
   "type": "module",
   "scripts": {
-    "start": "pm2 start index.js --deep-monitoring --attach --name TREX-MD",
+    "start": "pm2 start bera.js --deep-monitoring --attach --name TREX-MD",
     "stop": "pm2 stop TREX-MD",
     "restart": "pm2 restart TREX-MD"
   },
