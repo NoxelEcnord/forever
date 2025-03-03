@@ -1,33 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import moment from 'moment-timezone';
 import pkg from '@whiskeysockets/baileys';
 const { generateWAMessageFromContent, proto } = pkg;
@@ -83,7 +54,7 @@ const allMenu = async (m, sock) => {
           externalAdReply: {
             title: "",
             body: pushName,
-            thumbnailUrl: '', // Thumbnail URL
+            thumbnailUrl: 'https://files.catbox.moe/a5grsf.jpg', // Thumbnail URL
             sourceUrl: '', // Source URL
             mediaType: 1,
             renderLargerThumbnail: true,
@@ -99,19 +70,19 @@ const allMenu = async (m, sock) => {
     await m.React('⏳'); // React with a loading icon
     const aliveMessage = `
 ╭───❍「 *𝖳𝖱𝖤𝖷 𝖬𝖣* 」
-│ 🧑‍💻 *User:* pushName{pushwish}
+│ 🧑‍💻 *User:* ${pushName} ${pushwish}
 │ 🌐 *Mode:* mode
 │ ⏰ *Time:*{realTime}
-│ 🚀 *UPTime:* daysd{hours}h minutesm{seconds}s
+│ 🚀 *UPTime:${days}d ${hours}h ${minutes}m ${seconds}s
 ╰───────────❍
-╭───❍「 * Menu Of 𝖳𝖱𝖤𝖷 𝖬𝖣* 」
-*│* 💙 *prefixIslamicmenu*
-*│* 📥 *{prefix}downloadmenu*
-*│* 🤖 *prefixAimenmenu*
-*│* 💭 *{prefix}Searchmenu*
-*│* ⚙️ *prefixToolsmenu*
-*│* ©️ *{prefix}Logomenu*
-*│* 🫂 *${prefix}Groupmenu*
+╭───❍「 * 𝖳𝖱𝖤𝖷 𝖬𝖣 MENU LIST* 」
+*│* 💙 ${prefix}Islamicmenu*
+*│* 📥 ${prefix}downloadmenu*
+*│* 🤖 ${prefix}Aimenmenu*
+*│* 💭 ${prefix}Searchmenu*
+*│* ⚙️ ${prefix}Toolsmenu*
+*│* ©️ ${prefix}Logomenu*
+*│* 🫂 ${prefix}Groupmenu*
 ╰───────────❍ 
 ╭───────────❍
 │Powered By 𝖡𝖤𝖱𝖠 𝖳𝖤𝖢𝖧
@@ -127,16 +98,16 @@ const allMenu = async (m, sock) => {
 
     const islamicmenuMessage = `
 ╭───❍「 *𝖳𝖱𝖤𝖷 𝖬𝖣*」
-│ User: pushName{pushwish}
-│ Mode: mode
-│ Time:{realTime}
-│ Uptime: daysd{hours}h minutesm{seconds}s
+│ User:   ${pushName} ${pushwish}
+│ Mode:    mode
+│ Time:   ${realTime}
+│ Uptime: ${days}d ${hours}h ${minutes}m ${seconds}s
 ╰───────────❍
 ╭───❍「 *ISLAMIC MENU* 」
-*│* 💙 *prefixSurahaudio*
-*│* 💙 *{prefix}Surahurdu*
-*│* 💙 *prefixAsmaulhusna*
-*│* 💙 *{prefix}Prophetname*
+*│* 💙 ${prefix}Surahaudio*
+*│* 💙 ${prefix}Surahurdu*
+*│* 💙 ${prefix}Asmaulhusna*
+*│* 💙 ${prefix}Prophetname*
 ╰───────────❍  
 ╭───────────❍
 │𝖳𝖱𝖤𝖷 𝖬𝖣
@@ -151,33 +122,33 @@ await m.React('✅'); // React with success icon
 
     const downloadmenuMessage = `
 ───❍「 *𝖳𝖱𝖤𝖷 𝖬𝖣* 」
-│ User: pushName{pushwish}
-│ Mode: mode
-│ Time:{realTime}
-│ Uptime: daysd{hours}h minutesm{seconds}s
+│ User: ${pushName} ${pushwish}
+│ Mode: ${mode}
+│ Time: ${realTime}
+│ Uptime: ${days}d ${hours}h ${minutes}m ${seconds}s
 ╰───────────❍
 ╭───❍「 *DOWNLOAD MENU * 」
-*┋*⏬️ *prefixFb*
-*┋*⏬️ *{prefix}Fb2*
-*┋*⏬️ *prefixFb3*
-*┋*⏬️ *{prefix}Insta*
-*┋*⏬️ *prefixInsta2*
-*┋*⏬️ *{prefix}Play*
-*┋*⏬️ *prefixSong*
-*┋*⏬️ *{prefix}Video*
-*┋*⏬️ *prefixYtv*
-*┋*⏬️ *{prefix}Twitter*
-*┋*⏬️ *prefixTwitter2*
-*┋*⏬️ *{prefix}TwitAudio*
-*┋*⏬️ *prefixTiktok*
-*┋*⏬️ *{prefix}Tiktok2*
-*┋*⏬️ *prefixYtmp3*
-*┋*⏬️ *{prefix}Ytmp4*
-*┋*⏬️ *prefixMediaFire*
-*┋*⏬️ *{prefix}MediaFire2*
-*┋*⏬️ *prefixSpotify2*
-*┋*⏬️ *{prefix}Gdrive*
-*┋*⏬️ *${prefix}Apk*
+*┋*⏬️ ${prefix}Fb
+*┋*⏬️ ${prefix}Fb2
+*┋*⏬️ ${prefix}Fb3
+*┋*⏬️ ${prefix}Insta
+*┋*⏬️ $prefixInsta2
+*┋*⏬️ ${prefix}Play
+*┋*⏬️ ${prefix}Song
+*┋*⏬️ ${prefix}Video
+*┋*⏬️ ${prefix}Ytv
+*┋*⏬️ ${prefix}Twitter
+*┋*⏬️ ${prefix}Twitter2
+*┋*⏬️ ${prefix}TwitAudio
+*┋*⏬️ ${prefixTiktok
+*┋*⏬️ ${prefix}Tiktok2
+*┋*⏬️ ${prefixYtmp3
+*┋*⏬️ ${prefix}Ytmp4
+*┋*⏬️ ${prefix}MediaFire
+*┋*⏬️ ${prefix}MediaFire2
+*┋*⏬️ ${prefix}Spotify2
+*┋*⏬️ ${prefix}Gdrive
+*┋*⏬️ ${prefix}Apk
 ╰───────────❍   
 ╭───────────❍
 │𝖳𝖱𝖤𝖷 𝖬𝖣
@@ -389,6 +360,5 @@ await m.React('✅'); // React with success icon
 // coded by bera tech 
 
 export default allMenu;
-
 
 
