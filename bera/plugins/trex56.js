@@ -54,7 +54,7 @@ const allMenu = async (m, sock) => {
           externalAdReply: {
             title: "",
             body: pushName,
-            thumbnailUrl: 'https://files.catbox.moe/a5grsf.jpg', // Thumbnail URL
+            thumbnailUrl: '', // Thumbnail URL
             sourceUrl: '', // Source URL
             mediaType: 1,
             renderLargerThumbnail: true,
