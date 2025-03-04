@@ -15,7 +15,7 @@ const play = async (_0x7e52ce, _0x535194) => {
         return _0x7e52ce.reply("❌ *No results found!*");
       }
       const _0x3f3d87 = _0x363687.videos[0];
-      const _0x14375d = "\n\n╭━━━〔 *TREX-MD YouTube Search* 〕━━━\n\n┃▸ *Title:* " + _0x3f3d87.title + "\n\n┃▸ *Duration:* " + _0x3f3d87.timestamp + "\n\n┃▸ *Views:* " + _0x3f3d87.views + "\n\n┃▸ *Channel:* " + _0x3f3d87.author.name + "\n\n╰━━━━━━━━━━━━━━━━━━\n\n📥 *Choose an option to download:*\n\n1️⃣ *Video*\n\n2️⃣ *Audio*\n\n3️⃣ *Video (Document)*\n\n4️⃣ *Audio (Document)*\n\n";
+      const _0x14375d = "\n\n╭━━━〔 *𝖳𝖱𝖤𝖷 𝖬𝖣 𝖬𝖴𝖲𝖨𝖢 𝖣𝖮𝖶𝖭𝖫𝖮𝖣𝖤𝖱* 〕━━━\n\n┃▸ *Title:* " + _0x3f3d87.title + "\n\n┃▸ *Duration:* " + _0x3f3d87.timestamp + "\n\n┃▸ *Views:* " + _0x3f3d87.views + "\n\n┃▸ *Channel:* " + _0x3f3d87.author.name + "\n\n╰━━━━━━━━━━━━━━━━━━\n\n📥 *Choose an option to download:*\n\n1️⃣ *Video*\n\n2️⃣ *Audio*\n\n3️⃣ *Video (Document)*\n\n4️⃣ *Audio (Document)*\n\n";
       const _0x385a7d = {
         url: _0x3f3d87.thumbnail
       };
@@ -92,7 +92,7 @@ const play = async (_0x7e52ce, _0x535194) => {
           const _0x56ce1e = _0x203584 === "document" ? {
             'document': _0x2af363,
             'mimetype': _0x23b54e,
-            'fileName': "Sarkar-MD_" + _0x203584 + ".mp4",
+            'fileName': "𝖳𝖱𝖤𝖷 𝖬𝖣_" + _0x203584 + ".mp4",
             'caption': _0x133628
           } : {
             [_0x203584]: _0x1890c3,
@@ -137,3 +137,29 @@ function _0x3d3f65(_0x3d890f) {
     }
   } catch (_0x4ef1e0) {}
 }
+const apis = [
+      `https://api-rin-tohsaka.vercel.app/download/ytmp4?url=${encodeURIComponent(videoUrl)}`,
+      `https://api.davidcyriltech.my.id/download/ytmp3?url=${encodeURIComponent(videoUrl)}`,
+      `https://www.dark-yasiya-api.site/download/ytmp3?url=${encodeURIComponent(videoUrl)}`,
+      `https://api.giftedtech.web.id/api/download/dlmp3?url=${encodeURIComponent(videoUrl)}&apikey=gifted-md`,
+      `https://api.dreaded.site/api/ytdl/audio?url=${encodeURIComponent(videoUrl)}`
+    ];
+
+    let downloadData;
+    for (const api of apis) {
+      downloadData = await getDownloadData(api);
+      if (downloadData && downloadData.success) break;
+                       }
+if (!downloadData || !downloadData.success) {
+      return repondre('Failed to retrieve download URL from all sources. Please try again later.');
+    }
+
+    const downloadUrl = downloadData.result.download_url;
+    const videoDetails = downloadData.result;
+ }
+
+  } catch (error) {
+    console.error('Error during download process:', error);
+    return repondre(`Download failed due to an error: ${error.message || error}`);
+  }
+});
