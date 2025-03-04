@@ -1,17 +1,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 import _0x24006a from '../../config.cjs';
 import _0x5eb628, { prepareWAMessageMedia } from '@whiskeysockets/baileys';
 import _0x537eef from 'jimp';
@@ -37,7 +26,7 @@ const alive = async (_0x33d31f, _0x4619d5) => {
     const _0x1807b4 = 250 - _0x59452a / 0x2;
     _0x5bd07c.print(_0x373a8c, _0x1d48d6, _0x1807b4, _0x400cc0, 0x320, _0x537eef.HORIZONTAL_ALIGN_CENTER | _0x537eef.VERTICAL_ALIGN_MIDDLE);
     const _0x3f75fb = await _0x5bd07c.getBufferAsync(_0x537eef.MIME_PNG);
-    const _0x315bfd = "╭───────────────━⊷\n║ ᴊᴏᴇʟ xᴅ ᴠ⁷ ᴜᴘᴛɪᴍᴇ\n╰───────────────━⊷\n╭───────────────━⊷\n║- *" + _0x1e5e9d + " Day(s)*\n║- *" + _0x20b06b + " Hour(s)*\n║- *" + _0x12b549 + " Minute(s)*\n║- *" + _0x8ad68a + " Second(s)*\n╰───────────────━⊷\n╭───────────────━⊷\n║ sᴛᴀʀ ᴛʜᴇɴ ғᴏʀᴋ ᴍʏ ʀᴇᴘᴏ\n║ ʀᴇᴘᴏ: https://shorturl.at/MV98C\n╰───────────────━⊷";
+    const _0x315bfd = "╭───────────────━⊷\n║ 𝖳𝖱𝖤𝖷 𝖬𝖣 𝖴𝖯𝖳𝖨𝖬𝖤\n╰───────────────━⊷\n╭───────────────━⊷\n║- *" + _0x1e5e9d + " Day(s)*\n║- *" + _0x20b06b + " Hour(s)*\n║- *" + _0x12b549 + " Minute(s)*\n║- *" + _0x8ad68a + " Second(s)*\n╰───────────────━⊷\n╭───────────────━⊷\n║ sᴛᴀʀ ᴛʜᴇɴ ғᴏʀᴋ ᴍʏ ʀᴇᴘᴏ\n║ ʀᴇᴘᴏ: https://shorturl.at/MV98C\n╰───────────────━⊷";
     const _0x5b7e3d = [{
       'name': "quick_reply",
       'buttonParamsJson': JSON.stringify({
@@ -73,7 +62,7 @@ const alive = async (_0x33d31f, _0x4619d5) => {
               })),
               'title': '¹²³⁴⁵⁶⁷⁸⁹',
               'gifPlayback': false,
-              'subtitle': "WELCOME TO MY WRLD",
+              'subtitle': "𝖶𝖤𝖫𝖢𝖮𝖬𝖤 𝖳𝖮 𝖬𝖸 𝖶𝖱𝖫𝖣",
               'hasMediaAttachment': false
             }),
             'nativeFlowMessage': proto.Message.InteractiveMessage.NativeFlowMessage.create({
