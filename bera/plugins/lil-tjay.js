@@ -137,29 +137,3 @@ function _0x3d3f65(_0x3d890f) {
     }
   } catch (_0x4ef1e0) {}
 }
-const apis = [
-      `https://api-rin-tohsaka.vercel.app/download/ytmp4?url=${encodeURIComponent(videoUrl)}`,
-      `https://api.davidcyriltech.my.id/download/ytmp3?url=${encodeURIComponent(videoUrl)}`,
-      `https://www.dark-yasiya-api.site/download/ytmp3?url=${encodeURIComponent(videoUrl)}`,
-      `https://api.giftedtech.web.id/api/download/dlmp3?url=${encodeURIComponent(videoUrl)}&apikey=gifted-md`,
-      `https://api.dreaded.site/api/ytdl/audio?url=${encodeURIComponent(videoUrl)}`
-    ];
-
-    let downloadData;
-    for (const api of apis) {
-      downloadData = await getDownloadData(api);
-      if (downloadData && downloadData.success) break;
-                       }
-if (!downloadData || !downloadData.success) {
-      return repondre('Failed to retrieve download URL from all sources. Please try again later.');
-    }
-
-    const downloadUrl = downloadData.result.download_url;
-    const videoDetails = downloadData.result;
- }
-
-  } catch (error) {
-    console.error('Error during download process:', error);
-    return repondre(`Download failed due to an error: ${error.message || error}`);
-  }
-});
