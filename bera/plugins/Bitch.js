@@ -38,6 +38,62 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import _0x1d5acc from 'axios';
 import _0xc43629 from '../../config.cjs';
 const LogoCmd = async (_0x2251e0, _0x3b8c41) => {
@@ -46,7 +102,7 @@ const LogoCmd = async (_0x2251e0, _0x3b8c41) => {
   const _0xdc4fae = _0x2251e0.body.startsWith(_0x20d68a) ? _0x2251e0.body.slice(_0x20d68a.length).split(" ")[0].toLowerCase() : '';
   const _0x534be9 = async _0x25ab41 => {
     const _0x261341 = {
-      newsletterJid: "120363317462952356@newsletter",
+      newsletterJid: "120363315115438245@newsletter",
       newsletterName: "𝖱𝖾𝗀𝖺𝗋𝖽𝗌 𝖡𝖾𝗋𝖺 𝖳𝖾𝖼𝗁",
       serverMessageId: -1
     };
@@ -116,7 +172,7 @@ const LogoCmd = async (_0x2251e0, _0x3b8c41) => {
           url: _0x5586aa
         };
         const _0x11b112 = {
-          newsletterJid: "120363317462952356@newsletter",
+          newsletterJid: "120363315115438245@newsletter",
           newsletterName: "𝖳𝖱𝖤𝖷 𝖬𝖣",
           serverMessageId: -1
         };
