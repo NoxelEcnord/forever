@@ -53,8 +53,8 @@ const allMenu = async (m, sock) => {
           externalAdReply: {
             title: "",
             body: pushName,
-            thumbnailUrl: 'https://files.catbox.moe/d4vwgi.jpg', // Thumbnail URL
-            sourceUrl: '', // Source URL
+            thumbnailUrl: 'https://files.catbox.moe/zeu1ya.jpg', // Thumbnail URL
+            sourceUrl: 'https://files.catbox.moe/tdhhl5.mp3', // Source URL
             mediaType: 1,
             renderLargerThumbnail: true,
           },
