@@ -54,7 +54,7 @@ const LogoCmd = async (_0x2251e0, _0x3b8c41) => {
       title: "𝖳𝖱𝖤𝖷 𝖬𝖣 𝖫𝖮𝖦𝖮 𝖬𝖤𝖭𝖴",
       body: _0x2b06df,
       thumbnailUrl: "https://avatars.githubusercontent.com/u/162905644?v=4",
-     
+      sourceUrl: "https://whatsapp.com/channel/0029VajJoCoLI8YePbpsnE3q",
       mediaType: 0x1,
       renderLargerThumbnail: false
     };
