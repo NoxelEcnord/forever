@@ -1,6 +1,43 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import _0x1d5acc from 'axios';
 import _0xc43629 from '../../config.cjs';
 const LogoCmd = async (_0x2251e0, _0x3b8c41) => {
@@ -10,14 +47,14 @@ const LogoCmd = async (_0x2251e0, _0x3b8c41) => {
   const _0x534be9 = async _0x25ab41 => {
     const _0x261341 = {
       newsletterJid: "120363317462952356@newsletter",
-      newsletterName: "ᴊᴏᴇʟ xᴅ ᴠ⁷",
+      newsletterName: "𝖱𝖾𝗀𝖺𝗋𝖽𝗌 𝖡𝖾𝗋𝖺 𝖳𝖾𝖼𝗁",
       serverMessageId: -1
     };
     const _0x3c9ddd = {
-      title: "ᴊᴏᴇʟ xᴍᴅ ʟᴏɢᴏ ᴍᴇɴᴜ",
+      title: "𝖳𝖱𝖤𝖷 𝖬𝖣 𝖫𝖮𝖦𝖮 𝖬𝖤𝖭𝖴",
       body: _0x2b06df,
       thumbnailUrl: "https://avatars.githubusercontent.com/u/162905644?v=4",
-      sourceUrl: "https://whatsapp.com/channel/0029Vak2PevK0IBh2pKJPp2K",
+     
       mediaType: 0x1,
       renderLargerThumbnail: false
     };
@@ -38,26 +75,26 @@ const LogoCmd = async (_0x2251e0, _0x3b8c41) => {
   const _0x331685 = {
     logo: "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/create-a-blackpink-style-logo-with-members-signatures-810.html&name="
   };
-  _0x331685.logo1 = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/online-blackpink-style-logo-maker-effect-711.html&name=";
-  _0x331685.logo2 = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/create-glossy-silver-3d-text-effect-online-802.html&name=";
-  _0x331685.logo3 = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/naruto-shippuden-logo-style-text-effect-online-808.html&name=";
-  _0x331685.logo4 = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/create-digital-glitch-text-effects-online-767.html&name=";
-  _0x331685.logo5 = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/create-pixel-glitch-text-effect-online-769.html&name=";
-  _0x331685.logo6 = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/create-online-3d-comic-style-text-effects-817.html&name=";
-  _0x331685.logo7 = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/create-colorful-neon-light-text-effects-online-797.html&name=";
-  _0x331685.logo8 = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/free-bear-logo-maker-online-673.html&name=";
-  _0x331685.logo9 = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/neon-devil-wings-text-effect-online-683.html&name=";
-  _0x331685.logo10 = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/write-text-on-wet-glass-online-589.html&name=";
-  _0x331685.logo11 = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/create-typography-status-online-with-impressive-leaves-357.html&name=";
-  _0x331685.logo12 = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/create-dragon-ball-style-text-effects-online-809.html&name=";
-  _0x331685.logo13 = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/handwritten-text-on-foggy-glass-online-680.html&name=";
-  _0x331685.logo14 = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/create-colorful-neon-light-text-effects-online-797.html&name=";
-  _0x331685.logo15 = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/create-a-3d-castle-pop-out-mobile-photo-effect-786.html&name=";
-  _0x331685.logo16 = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/create-a-frozen-christmas-text-effect-online-792.html&name=";
-  _0x331685.logo17 = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/beautiful-3d-foil-balloon-effects-for-holidays-and-birthday-803.html&name=";
-  _0x331685.logo18 = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/create-3d-colorful-paint-text-effect-online-801.html&name=";
-  _0x331685.logo19 = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/free-online-american-flag-3d-text-effect-generator-725.html&name=";
-  if (_0xdc4fae === "logo" || _0xdc4fae === "logo1" || _0xdc4fae === "logo2" || _0xdc4fae === "logo3" || _0xdc4fae === "logo4" || _0xdc4fae === "logo5" || _0xdc4fae === "logo6" || _0xdc4fae === "logo7" || _0xdc4fae === "logo8" || _0xdc4fae === "logo9" || _0xdc4fae === "logo10" || _0xdc4fae === "logo11" || _0xdc4fae === "logo12" || _0xdc4fae === "logo13" || _0xdc4fae === "logo14" || _0xdc4fae === "logo15" || _0xdc4fae === "logo16" || _0xdc4fae === "logo17" || _0xdc4fae === "logo18" || _0xdc4fae === "logo19") {
+  _0x331685.black-pink = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/online-blackpink-style-logo-maker-effect-711.html&name=";
+  _0x331685.glossy-silver = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/create-glossy-silver-3d-text-effect-online-802.html&name=";
+  _0x331685.Naruto = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/naruto-shippuden-logo-style-text-effect-online-808.html&name=";
+  _0x331685.digital-glitch = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/create-digital-glitch-text-effects-online-767.html&name=";
+  _0x331685.pixel-glitch = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/create-pixel-glitch-text-effect-online-769.html&name=";
+  _0x331685.star = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/create-online-3d-comic-style-text-effects-817.html&name=";
+  _0x331685.smoke = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/create-colorful-neon-light-text-effects-online-797.html&name=";
+  _0x331685.bear = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/free-bear-logo-maker-online-673.html&name=";
+  _0x331685.neon-devil = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/neon-devil-wings-text-effect-online-683.html&name=";
+  _0x331685.screen = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/write-text-on-wet-glass-online-589.html&name=";
+  _0x331685.nature = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/create-typography-status-online-with-impressive-leaves-357.html&name=";
+  _0x331685.dragonball = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/create-dragon-ball-style-text-effects-online-809.html&name=";
+  _0x331685.foggy-glass = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/handwritten-text-on-foggy-glass-online-680.html&name=";
+  _0x331685.neon-light = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/create-colorful-neon-light-text-effects-online-797.html&name=";
+  _0x331685.castle-pop = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/create-a-3d-castle-pop-out-mobile-photo-effect-786.html&name=";
+  _0x331685.frozen-christmas = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/create-a-frozen-christmas-text-effect-online-792.html&name=";
+  _0x331685.foil-balloon = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/beautiful-3d-foil-balloon-effects-for-holidays-and-birthday-803.html&name=";
+  _0x331685.colorful-paint = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/create-3d-colorful-paint-text-effect-online-801.html&name=";
+  _0x331685.american-flag = "https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/free-online-american-flag-3d-text-effect-generator-725.html&name=";
+  if (_0xdc4fae === "logo" || _0xdc4fae === "black-pink" || _0xdc4fae === "glossy-silver" || _0xdc4fae === "Naruto" || _0xdc4fae === "digital-glitch" || _0xdc4fae === "pixel-glitch" || _0xdc4fae === "star" || _0xdc4fae === "smoke" || _0xdc4fae === "bear" || _0xdc4fae === "neon-devil" || _0xdc4fae === "screen" || _0xdc4fae === "nature" || _0xdc4fae === "dragonball" || _0xdc4fae === "foggy-glass" || _0xdc4fae === "neon-light" || _0xdc4fae === "castle-pop" || _0xdc4fae === "frozen-christmas" || _0xdc4fae === "foil-baloon" || _0xdc4fae === "cream" || _0xdc4fae === "american-flag") {
     const _0x30d618 = _0x2251e0.body.slice(_0x20d68a.length + _0xdc4fae.length + 1).trim();
     if (!_0x30d618) {
       await _0x534be9("⚠️ Please provide text to generate a logo!");
