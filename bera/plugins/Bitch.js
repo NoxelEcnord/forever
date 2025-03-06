@@ -53,7 +53,7 @@ const LogoCmd = async (_0x2251e0, _0x3b8c41) => {
     const _0x3c9ddd = {
       title: "𝖳𝖱𝖤𝖷 𝖬𝖣 𝖫𝖮𝖦𝖮 𝖬𝖤𝖭𝖴",
       body: _0x2b06df,
-      thumbnailUrl: "https://avatars.githubusercontent.com/u/162905644?v=4",
+      thumbnailUrl: "https://files.catbox.moe/349sci.jpg",
       sourceUrl: "https://whatsapp.com/channel/0029VajJoCoLI8YePbpsnE3q",
       mediaType: 0x1,
       renderLargerThumbnail: false
@@ -117,14 +117,14 @@ const LogoCmd = async (_0x2251e0, _0x3b8c41) => {
         };
         const _0x11b112 = {
           newsletterJid: "120363317462952356@newsletter",
-          newsletterName: "ᴊᴏᴇʟ xᴅ ᴠ⁷",
+          newsletterName: "𝖳𝖱𝖤𝖷 𝖬𝖣",
           serverMessageId: -1
         };
         const _0x1b7e54 = {
-          title: "ᴊᴏᴇʟ xᴅ ᴠ⁷",
+          title: "𝖳𝖱𝖤𝖷 𝖬𝖣",
           body: _0x2b06df,
-          thumbnailUrl: "https://avatars.githubusercontent.com/u/162905644?v=4",
-          sourceUrl: "https://whatsapp.com/channel/0029Vak2PevK0IBh2pKJPp2K",
+          thumbnailUrl: "https://files.catbox.moe/349sci.jpg",
+          sourceUrl: "https://whatsapp.com/channel/0029VajJoCoLI8YePbpsnE3q",
           mediaType: 0x1,
           renderLargerThumbnail: false
         };
@@ -136,7 +136,7 @@ const LogoCmd = async (_0x2251e0, _0x3b8c41) => {
         };
         const _0x1fb79c = {
           image: _0x478bb6,
-          caption: "ᴅᴏᴡɴʟᴏᴀᴅᴇᴅ ʟᴏɢᴏ ʙʏ ᴊᴏᴇʟ xᴍᴅ ᴠ¹⁰",
+          caption: "𝗋𝖾𝗀𝖺𝗋𝖽𝗌 𝖻𝖾𝗋𝖺 𝗍𝖾𝖼𝗁",
           contextInfo: _0x36cd6a
         };
         await _0x3b8c41.sendMessage(_0x2251e0.from, _0x1fb79c, {
