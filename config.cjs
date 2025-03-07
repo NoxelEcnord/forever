@@ -1,8 +1,6 @@
 const fs = require("fs");
 require("dotenv").config();
-function convertToBool(text, fault = 'true') {
-    return text === fault ? true : false;
-}
+
 const config = {
 SESSION_ID: process.env.SESSION_ID || "",
 // add your Session Id 
