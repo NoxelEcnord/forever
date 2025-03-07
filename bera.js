@@ -117,22 +117,7 @@ CONTACT INFO
             }
         });
 
-        Matrix.ev.on('creds.update', saveCreds);
-
-        
-  //==============================
-
-  conn.ev.on('messages.update', async updates => {
-    for (const update of updates) {
-      if (update.update.message === null) {
-        console.log("Delete Detected:", JSON.stringify(update, null, 2));
-        await AntiDelete(conn, updates);
-      }
-    }
-  });
-  //============================== 
-          
-
+        Matrix.ev.on('creds.update', saveCreds)      
         Matrix.ev.on("messages.upsert", async chatUpdate => await Handler(chatUpdate, Matrix, logger));
         Matrix.ev.on("call", async (json) => await Callupdate(json, Matrix));
         Matrix.ev.on("group-participants.update", async (messag) => await GroupUpdate(Matrix, messag));
