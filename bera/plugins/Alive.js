@@ -14,7 +14,7 @@ const alive = async (m, Matrix) => {
 
   if (!['alive', 'uptime', 'runtime'].includes(cmd)) return;
 
-  const str = `*𝖳𝖱𝖤𝖷 𝖬𝖣 𝖨𝖲 𝖠𝖫𝖨𝖵𝖤 𝖡𝖱𝖴𝖵 😎*\n*𝖚𝖕𝖙𝖎𝖒𝖊: 📆 ${timeString}*`;
+  const str = `*𝖳𝖱𝖤𝖷 𝖬𝖣 𝖨𝖲 𝖠𝖫𝖨𝖵𝖤 𝖡𝖱𝖴𝖵 *\n*𝖚𝖕𝖙𝖎𝖒𝖊:  ${timeString}*`;
 
   await Matrix.sendMessage(m.from, {
     image: fs.readFileSync('./media/Trex.jpg'),
