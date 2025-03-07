@@ -20,7 +20,7 @@ STICKER_NAME: process.env.STICKER_NAME || "TREX-MD",
 // type sticker pack name 
 CUSTOM_REACT: process.env.CUSTOM_REACT || "false",
 // make this true for custum emoji react    
-CUSTOM_REACT_EMOJIS: process.env.CUSTOM_REACT_EMOJIS || "💝,💖,💗,❤️‍🩹,❤️,🧡,💛,💚,💙,💜,🤎,🖤,🤍",
+
 // chose custom react emojis by yourself 
 DELETE_LINKS: process.env.DELETE_LINKS || "false",
 // automatic delete links witho remove member 
@@ -30,7 +30,6 @@ OWNER_NAME: process.env.OWNER_NAME || "BRUCE BERA",
 // add bot owner name
 DESCRIPTION: process.env.DESCRIPTION || "*© 𝗋𝖾𝗀𝖺𝗋𝖽𝗌 𝖻𝖾𝗋𝖺 𝗍𝖾𝖼𝗁  *",
 // add bot owner name    
-ALIVE_IMG: process.env.ALIVE_IMG || "https://files.catbox.moe/149k8x.jpg",
 // add img for alive msg
 LIVE_MSG: process.env.LIVE_MSG || "> 𝗋𝖾𝗀𝖺𝗋𝖽𝗌 𝖻𝖾𝗋𝖺 𝗍𝖾𝖼𝗁*𝖳𝖱𝖤𝖷 𝖬𝖣*⚡",
 // add alive msg here 
