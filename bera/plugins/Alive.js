@@ -8,17 +8,17 @@ const alive = async (m, Matrix) => {
   const minutes = Math.floor((uptimeSeconds % 3600) / 60);
   const seconds = Math.floor(uptimeSeconds % 60);
   const timeString = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-
+  
   const prefix = config.PREFIX;
   const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0].toLowerCase() : '';
 
   if (!['alive', 'uptime', 'runtime'].includes(cmd)) return;
 
-  const str = `*
-📆 ${daysString} Day(s)*
-*🕰️ ${hoursString} Hour(s)*
-*⏳ ${minutesString} Minute(s)*
-*⏲️ ${secondsString} Second(s)*`;
+  const str = `
+*📆  ${days} Day(s)
+*🕰️  ${hours} Hour(s)
+*⏳  ${minutes} Minute(s)
+*⏲️  ${seconds} Second(s)`;
 
   await Matrix.sendMessage(m.from, {
     image: fs.readFileSync('./media/Trex.jpg'),
