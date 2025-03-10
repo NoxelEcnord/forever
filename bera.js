@@ -83,7 +83,7 @@ async function start() {
                     const msg = await store.loadMessage(key.remoteJid, key.id);
                     return msg.message || undefined;
                 }
-                return { conversation: "TREX MD  whatsapp user bot" };
+                return { conversation: "NORD  whatsapp user bot" };
             }
         });
 
@@ -97,18 +97,18 @@ async function start() {
                 if (initialConnection) {
                       console.log(chalk.green("TREX MD IS CONNECTED SUCCESSFULLY  "));
             Matrix.sendMessage(Matrix.user.id, { 
-                video: { url: "https://files.catbox.moe/0hixso.mp4" }, 
+                video: { url: "https://files.catbox.moe/yjnz8f.gif" }, 
                 caption: `*Hello there TREX MD User! 👋🏻* 
 
-Simple, Straightforward, and Loaded With Features 🎊. Meet TREX MD WhatsApp Bot.
+Simple, Straightforward, and Loaded With Features 🎊. Meet NORD WhatsApp Bot.
 REPORT ANY PROBLEM MY DEVELOPER
   DEVELOPER NAME
 © BRUCE 
 CONTACT INFO
-0743982206
+0726498682
                    
     
-> © MADE BY  BERA TECH TEAM`
+> © jibambe`
             });
             initialConnection = false;
                 } else {
@@ -168,7 +168,7 @@ async function init() {
 init();
 
 app.get('/', (req, res) => {
-    res.send('TREX MD CONNECTED SUCCESSFULLY ');
+    res.send('NORD CONNECTED SUCCESSFULLY ');
 });
 
 app.listen(PORT, () => {
